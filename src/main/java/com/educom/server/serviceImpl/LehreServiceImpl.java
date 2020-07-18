@@ -11,6 +11,7 @@ import java.util.List;
 public class LehreServiceImpl implements LehreService {
     @Autowired
     LehreDao lehreDao;
+
     @Override
     public List<Lehre> getAllLehreList() {
         return lehreDao.getAllLehreList();
@@ -20,5 +21,15 @@ public class LehreServiceImpl implements LehreService {
     public String saveLehreDetails(Lehre lehre) {
 
         return lehreDao.saveLehreDetails(lehre);
+    }
+
+    @Override
+    public Lehre getLehre(Long id) {
+        return lehreDao.getLehre(id);
+    }
+
+    @Override
+    public void deleteLehre(Long id) {
+        lehreDao.deleteLehre(id);
     }
 }

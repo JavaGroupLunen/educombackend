@@ -9,7 +9,7 @@ import javax.persistence.EntityManagerFactory;
 
 @Configuration
 public class BeanConfig {
-   // @Autowired
+//    @Autowired
 //    private EntityManagerFactory entityManagerFactory;
 //    @Bean
 //    public SessionFactory getSessionFactory(){

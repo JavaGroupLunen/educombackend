@@ -5,10 +5,10 @@ import com.educom.server.services.LehreService;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -34,12 +34,34 @@ public class LehreController {
         Lehre lehre = lehreService.getLehre(id);
         return new ResponseEntity<Lehre>(lehre, HttpStatus.OK);
     }
-
-    //@DeleteMapping("/employees/{id}")
-    @RequestMapping(value = "/getbyId/{id}", method = RequestMethod.DELETE)
-    void  deleteLehre(@PathVariable Long id) {
-        lehreService.deleteLehre(id);
+    @RequestMapping(value = "/findByName/{firstname}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lehre>> lehreFindByName(@PathVariable("firstname") String firstname) {
+        List<Lehre> lehreList = lehreService.findByName(firstname);
+        return new ResponseEntity<List<Lehre>>(lehreList, HttpStatus.OK);
+    }
+    @RequestMapping(value = "/findByLastName/{lastName}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lehre>> lehreFindByLastName(@PathVariable("lastName") String lastName) {
+        List<Lehre> lehreList = lehreService.findByLastName(lastName);
+        return new ResponseEntity<List<Lehre>>(lehreList, HttpStatus.OK);
+    }
+    @RequestMapping(value = "/findByEmailId/{emailId}", method = RequestMethod.GET)
+    public ResponseEntity<List<Lehre>> lehreFindByEmailId(@PathVariable("emailId") String emailId) {
+        List<Lehre> lehreList = lehreService.findByEmailId(emailId);
+        return new ResponseEntity<List<Lehre>>(lehreList, HttpStatus.OK);
     }
 
 
-}
+    @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)
+    public String  deleteLehre(@PathVariable Long id) {
+        return lehreService.deleteLehre(id);
+
+    }
+
+    @RequestMapping(value = "/updatelehre", method = RequestMethod.PUT)
+    public String updateLehre(@RequestBody Lehre updatelehre) {
+       return lehreService.saveLehreDetails(updatelehre);
+    }
+
+
+
+    }

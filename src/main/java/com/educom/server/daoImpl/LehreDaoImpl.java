@@ -42,15 +42,30 @@ public class LehreDaoImpl implements LehreDao {
     }
 
     @Override
-    public void deleteLehre(Long id) {
+    public String deleteLehre(Long id) {
         Lehre lehre = getLehre(id);
         entityManager.remove(lehre);
+return "removed";
     }
-
-    public List<Lehre> findWithName(String name) {
+    @Override
+    public List<Lehre> findByName(String firstName) {
         return entityManager.createQuery(
-                "from Lehre where name LIKE ?1")
-                .setParameter(1, name)
+                "from Lehre where firstName LIKE :firstName")
+                .setParameter("customName", firstName)
+                .getResultList();
+    }
+    @Override
+    public List<Lehre> findByLastName(String lastName) {
+        return entityManager.createQuery(
+                "from Lehre where lastName LIKE :lastName")
+                .setParameter("lastName", lastName)
+                .getResultList();
+    }
+    @Override
+    public List<Lehre> findByEmailId(String emailId) {
+        return entityManager.createQuery(
+                "from Lehre where emailId LIKE :emailId")
+                .setParameter("emailId", emailId)
                 .getResultList();
     }
 

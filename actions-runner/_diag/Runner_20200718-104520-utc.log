@@ -1,0 +1,421 @@
+[2020-07-18 10:45:20Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO HostContext] Well known config file 'Credentials': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials'
+[2020-07-18 10:45:20Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2020-07-18 10:45:20Z INFO Listener] RuntimeInformation: Linux 5.6.16-1-MANJARO #1 SMP PREEMPT Wed Jun 3 14:26:28 UTC 2020.
+[2020-07-18 10:45:20Z INFO Listener] Version: 2.267.1
+[2020-07-18 10:45:20Z INFO Listener] Commit: fd3c9de49d3894943c54c08c92eba9f4e2b43f79
+[2020-07-18 10:45:20Z INFO Listener] Culture: de-DE
+[2020-07-18 10:45:20Z INFO Listener] UI Culture: de-DE
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO Listener] Validating directory permissions for: '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO CommandLineParser] Parse
+[2020-07-18 10:45:20Z INFO CommandLineParser] Parsing 3 args
+[2020-07-18 10:45:20Z INFO CommandLineParser] parsing argument
+[2020-07-18 10:45:20Z INFO CommandLineParser] HasArgs: False
+[2020-07-18 10:45:20Z INFO CommandLineParser] Adding Command: run
+[2020-07-18 10:45:20Z INFO CommandLineParser] parsing argument
+[2020-07-18 10:45:20Z INFO CommandLineParser] HasArgs: True
+[2020-07-18 10:45:20Z INFO CommandLineParser] arg: startuptype
+[2020-07-18 10:45:20Z INFO CommandLineParser] parsing argument
+[2020-07-18 10:45:20Z INFO CommandLineParser] HasArgs: True
+[2020-07-18 10:45:20Z INFO CommandLineParser] Adding option 'startuptype': 'service'
+[2020-07-18 10:45:20Z INFO Listener] Arguments parsed
+[2020-07-18 10:45:20Z INFO Runner] ExecuteCommand
+[2020-07-18 10:45:20Z INFO ConfigurationStore] currentAssemblyLocation: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin/Runner.Listener.dll
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] binPath: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] RootFolder: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO HostContext] Well known config file 'Runner': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.runner'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] ConfigFilePath: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.runner
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO HostContext] Well known config file 'Credentials': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] CredFilePath: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_migrated'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] MigratedCredFilePath: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_migrated
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO HostContext] Well known config file 'Service': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.service'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] ServiceConfigFilePath: /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.service
+[2020-07-18 10:45:20Z INFO CommandSettings] Flag 'help': 'False'
+[2020-07-18 10:45:20Z INFO CommandSettings] Flag 'version': 'False'
+[2020-07-18 10:45:20Z INFO CommandSettings] Flag 'commit': 'False'
+[2020-07-18 10:45:20Z INFO CommandSettings] Command 'configure': 'False'
+[2020-07-18 10:45:20Z INFO CommandSettings] Command 'remove': 'False'
+[2020-07-18 10:45:20Z INFO CommandSettings] Command 'warmup': 'False'
+[2020-07-18 10:45:20Z INFO ConfigurationManager] LoadSettings
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsConfigured()
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsConfigured: True
+[2020-07-18 10:45:20Z INFO ConfigurationManager] Is configured: True
+[2020-07-18 10:45:20Z INFO ConfigurationStore] Read setting file: 291 chars
+[2020-07-18 10:45:20Z INFO ConfigurationManager] Settings Loaded
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsServiceConfigured: True
+[2020-07-18 10:45:20Z INFO CommandSettings] Command 'run': 'True'
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsConfigured()
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsConfigured: True
+[2020-07-18 10:45:20Z INFO ConfigurationManager] Is configured: True
+[2020-07-18 10:45:20Z INFO Runner] Set runner startup type - Service
+[2020-07-18 10:45:20Z INFO CommandSettings] Flag 'once': 'False'
+[2020-07-18 10:45:20Z INFO Runner] RunAsync
+[2020-07-18 10:45:20Z INFO ConfigurationManager] LoadSettings
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsConfigured()
+[2020-07-18 10:45:20Z INFO ConfigurationStore] IsConfigured: True
+[2020-07-18 10:45:20Z INFO ConfigurationManager] Is configured: True
+[2020-07-18 10:45:20Z INFO ConfigurationManager] Settings Loaded
+[2020-07-18 10:45:20Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "educom",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/xS3DMc8fuypaIvc6IH5KfwAZrUNp9lTOkYRQVRWO5s6OzTdBmU",
+  "GitHubUrl": "https://github.com/JavaGroupLunen/educombackend",
+  "WorkFolder": "_work"
+}
+[2020-07-18 10:45:20Z INFO MessageListener] Loading Credentials
+[2020-07-18 10:45:20Z INFO ConfigurationStore] HasCredentials()
+[2020-07-18 10:45:20Z INFO ConfigurationStore] stored True
+[2020-07-18 10:45:20Z INFO CredentialManager] GetCredentialProvider
+[2020-07-18 10:45:20Z INFO CredentialManager] Creating type OAuth
+[2020-07-18 10:45:20Z INFO CredentialManager] Creating credential type: OAuth
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Bin': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/bin'
+[2020-07-18 10:45:20Z INFO HostContext] Well known directory 'Root': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner'
+[2020-07-18 10:45:20Z INFO HostContext] Well known config file 'RSACredentials': '/home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams'
+[2020-07-18 10:45:20Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 10:45:20Z INFO MessageListener] Attempt to create session.
+[2020-07-18 10:45:20Z INFO MessageListener] Connecting to the Runner Server...
+[2020-07-18 10:45:20Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2020-07-18 10:45:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 10:45:20Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-07-18 10:45:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 10:45:20Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-07-18 10:45:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 10:45:21Z INFO MessageListener] VssConnection created
+[2020-07-18 10:45:21Z INFO Terminal] WRITE LINE: 
+[2020-07-18 10:45:21Z INFO Terminal] WRITE LINE: 
+[2020-07-18 10:45:22Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: fe2e7d3c-3b91-4b3f-8873-a0185208471c
+ActivityId: d8c42666-98f7-4c74-916b-66322e448e91
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 832865f8-4892-4bc9-a56b-447df08da23f
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 0339A02ACC0649A89D11227615F95ED3 Ref B: FRAEDGE0711 Ref C: 2020-07-18T10:45:21Z
+Date: Sat, 18 Jul 2020 10:45:21 GMT
+
+[2020-07-18 10:45:22Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 10:45:22Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 10:45:22Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 10:45:22Z INFO MessageListener] Session created.
+[2020-07-18 10:45:22Z INFO Terminal] WRITE LINE: 2020-07-18 10:45:22Z: Listening for Jobs
+[2020-07-18 10:45:22Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2020-07-18 11:15:28Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 11:40:34Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: e633568b-8979-4a2f-9c0e-d04eb47a2a85
+ActivityId: a7fd96ce-c62b-4762-a1fa-0ad46fa61db6
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 316d1d06-7547-4d0c-a30d-6b756f42fc0f
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 7F9BDEEEC1F84D0EA1E3C7E504C7D196 Ref B: FRAEDGE0711 Ref C: 2020-07-18T11:40:34Z
+Date: Sat, 18 Jul 2020 11:40:33 GMT
+
+[2020-07-18 11:40:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 11:40:34Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 11:45:35Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 13:54:15Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/xS3DMc8fuypaIvc6IH5KfwAZrUNp9lTOkYRQVRWO5s6OzTdBmU/_apis/distributedtask/pools/1/messages?sessionId=570f6cf7-7fa7-4fe3-aed9-59205a658be2 timed out after 60 seconds.
+[2020-07-18 13:54:15Z ERR  MessageListener] Catch exception during get next message.
+[2020-07-18 13:54:15Z ERR  MessageListener] System.TimeoutException: The HTTP request timed out after 00:01:00.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.<FillBufferAsync>g__InternalFillBufferAsync|215_0[TReadAdapter](TReadAdapter adap, ValueTask`1 task, Int32 min, Int32 initial)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TReadAdapter](TReadAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithNtConnectionAuthAsync(HttpConnection connection, HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.GetNextMessageAsync(CancellationToken token)
+[2020-07-18 13:54:15Z ERR  MessageListener] #####################################################
+[2020-07-18 13:54:15Z ERR  MessageListener] System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.<FillBufferAsync>g__InternalFillBufferAsync|215_0[TReadAdapter](TReadAdapter adap, ValueTask`1 task, Int32 min, Int32 initial)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TReadAdapter](TReadAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithNtConnectionAuthAsync(HttpConnection connection, HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+[2020-07-18 13:54:15Z ERR  MessageListener] #####################################################
+[2020-07-18 13:54:15Z ERR  MessageListener] System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.<FillBufferAsync>g__InternalFillBufferAsync|215_0[TReadAdapter](TReadAdapter adap, ValueTask`1 task, Int32 min, Int32 initial)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TReadAdapter](TReadAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+[2020-07-18 13:54:15Z ERR  MessageListener] #####################################################
+[2020-07-18 13:54:15Z ERR  MessageListener] System.Net.Sockets.SocketException (125): Operation canceled
+[2020-07-18 13:54:15Z INFO MessageListener] Retriable exception: The HTTP request timed out after 00:01:00.
+[2020-07-18 13:54:15Z ERR  Terminal] WRITE ERROR: 2020-07-18 13:54:15Z: Runner connect error: The HTTP request timed out after 00:01:00.. Retrying until reconnected.
+[2020-07-18 13:54:15Z INFO RunnerServer] Refresh MessageQueue VssConnection to get on a different AFD node.
+[2020-07-18 13:54:15Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-07-18 13:54:15Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 13:54:15Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 13:54:15Z INFO MessageListener] Sleeping for 25.893 seconds before retrying.
+[2020-07-18 13:54:41Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: e633568b-8979-4a2f-9c0e-d04eb47a2a85
+ActivityId: a40ee7ef-c62b-4762-a1fa-0ad46fa61db6
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 12187e19-eb06-4e2d-95ef-f1f46c754b9d
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: F2874986DFAA45DC8E9E05648822DC93 Ref B: FRAEDGE1521 Ref C: 2020-07-18T13:54:42Z
+Date: Sat, 18 Jul 2020 13:54:42 GMT
+
+[2020-07-18 13:54:41Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 13:54:42Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 13:55:32Z INFO Terminal] WRITE LINE: 2020-07-18 13:55:32Z: Runner reconnected.
+[2020-07-18 14:08:55Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 14:39:01Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 14:49:54Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: aa729897-6322-4a78-bcb3-44dc31a8b955
+ActivityId: c4db8265-1774-4062-96a3-917da2337e29
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 41a6f096-4cc4-45a3-9370-ffdad77522b3
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: BCEFE677541A43B4AF9C799D82BC0350 Ref B: FRAEDGE1521 Ref C: 2020-07-18T14:49:54Z
+Date: Sat, 18 Jul 2020 14:49:53 GMT
+
+[2020-07-18 14:49:54Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 14:49:54Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 15:09:08Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 15:39:14Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 15:45:05Z WARN GitHubActionsService] Authentication failed with status code 401.
+Transfer-Encoding: chunked
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: aa729897-6322-4a78-bcb3-44dc31a8b955
+ActivityId: c4c3eb7d-1774-4062-96a3-917da2337e29
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 4a38b2ab-66a5-49f4-b658-63303afc9854
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 8C696C5B0BC046E49052DC17378A29E0 Ref B: FRAEDGE1521 Ref C: 2020-07-18T15:45:05Z
+Date: Sat, 18 Jul 2020 15:45:05 GMT
+
+[2020-07-18 15:45:05Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 15:45:06Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 16:09:21Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 16:39:27Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 16:40:17Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: fe2e7d3c-3b91-4b3f-8873-a0185208471c
+ActivityId: db36c32c-98f7-4c74-916b-66322e448e91
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: af000cc3-7844-4d79-b1e9-a363abd87f6a
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 69A5A8BFD6854C0592D449DF140D5C1B Ref B: FRAEDGE1521 Ref C: 2020-07-18T16:40:17Z
+Date: Sat, 18 Jul 2020 16:40:17 GMT
+
+[2020-07-18 16:40:17Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 16:40:18Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 17:09:34Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 17:35:29Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: aa729897-6322-4a78-bcb3-44dc31a8b955
+ActivityId: c4f46956-1774-4062-96a3-917da2337e29
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 36e14ec4-caf9-48bc-a48f-6e6c4f84fa21
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 184B2DDDD0874979AAE92100FFF30F91 Ref B: FRAEDGE1521 Ref C: 2020-07-18T17:35:29Z
+Date: Sat, 18 Jul 2020 17:35:29 GMT
+
+[2020-07-18 17:35:29Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 17:35:30Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 17:39:41Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 18:09:47Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 18:30:42Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: aa729897-6322-4a78-bcb3-44dc31a8b955
+ActivityId: c4fc16b0-1774-4062-96a3-917da2337e29
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 696c413a-8322-4d0e-959c-3f09084b03cf
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 1F54638FD4BE41FDBD91541052CD2F30 Ref B: FRAEDGE1521 Ref C: 2020-07-18T18:30:41Z
+Date: Sat, 18 Jul 2020 18:30:41 GMT
+
+[2020-07-18 18:30:42Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 18:30:42Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 18:39:54Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 19:10:00Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 19:25:53Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: fe2e7d3c-3b91-4b3f-8873-a0185208471c
+ActivityId: db18ed15-98f7-4c74-916b-66322e448e91
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: 756c1011-5f11-47b2-9a37-2f9583f9a013
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: A472D820D4AB4B9EA2791547E75FAB70 Ref B: FRAEDGE1521 Ref C: 2020-07-18T19:25:53Z
+Date: Sat, 18 Jul 2020 19:25:53 GMT
+
+[2020-07-18 19:25:53Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 19:25:54Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 19:40:06Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 20:10:12Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 20:21:05Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: e633568b-8979-4a2f-9c0e-d04eb47a2a85
+ActivityId: a4345bb4-c62b-4762-a1fa-0ad46fa61db6
+X-TFS-Session: 2cf7a69f-a8db-4947-8df9-a1a51ae8563c
+X-VSS-E2EID: d16010b6-0ab8-4693-976d-a1875ac50d30
+X-VSS-SenderDeploymentId: a07ab14e-025a-39c3-8d53-788cd7ce207f
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: F6BFE300A24C41B28C34975150032C0C Ref B: FRAEDGE1521 Ref C: 2020-07-18T20:21:05Z
+Date: Sat, 18 Jul 2020 20:21:04 GMT
+
+[2020-07-18 20:21:05Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/cc/Schreibtisch/tutorialabapril/javafx/s1p-stocks-ui/educom/actions-runner/.credentials_rsaparams
+[2020-07-18 20:21:05Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-07-18 21:06:17Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/xS3DMc8fuypaIvc6IH5KfwAZrUNp9lTOkYRQVRWO5s6OzTdBmU/_apis/distributedtask/pools/1/messages?sessionId=570f6cf7-7fa7-4fe3-aed9-59205a658be2 timed out after 60 seconds.
+[2020-07-18 21:06:17Z ERR  MessageListener] Catch exception during get next message.
+[2020-07-18 21:06:17Z ERR  MessageListener] System.TimeoutException: The HTTP request timed out after 00:01:00.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.<FillBufferAsync>g__InternalFillBufferAsync|215_0[TReadAdapter](TReadAdapter adap, ValueTask`1 task, Int32 min, Int32 initial)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TReadAdapter](TReadAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithNtConnectionAuthAsync(HttpConnection connection, HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.GetNextMessageAsync(CancellationToken token)
+[2020-07-18 21:06:17Z ERR  MessageListener] #####################################################
+[2020-07-18 21:06:17Z ERR  MessageListener] System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.<FillBufferAsync>g__InternalFillBufferAsync|215_0[TReadAdapter](TReadAdapter adap, ValueTask`1 task, Int32 min, Int32 initial)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TReadAdapter](TReadAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithNtConnectionAuthAsync(HttpConnection connection, HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+[2020-07-18 21:06:17Z ERR  MessageListener] #####################################################
+[2020-07-18 21:06:17Z ERR  MessageListener] System.IO.IOException: Unable to read data from the transport connection: Operation canceled.
+ ---> System.Net.Sockets.SocketException (125): Operation canceled
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.<FillBufferAsync>g__InternalFillBufferAsync|215_0[TReadAdapter](TReadAdapter adap, ValueTask`1 task, Int32 min, Int32 initial)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TReadAdapter](TReadAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+[2020-07-18 21:06:17Z ERR  MessageListener] #####################################################
+[2020-07-18 21:06:17Z ERR  MessageListener] System.Net.Sockets.SocketException (125): Operation canceled
+[2020-07-18 21:06:17Z INFO MessageListener] Retriable exception: The HTTP request timed out after 00:01:00.
+[2020-07-18 21:06:17Z ERR  Terminal] WRITE ERROR: 2020-07-18 21:06:17Z: Runner connect error: The HTTP request timed out after 00:01:00.. Retrying until reconnected.
+[2020-07-18 21:06:17Z INFO RunnerServer] Refresh MessageQueue VssConnection to get on a different AFD node.
+[2020-07-18 21:06:17Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-07-18 21:06:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-07-18 21:06:19Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-07-18 21:06:19Z INFO MessageListener] Sleeping for 28.273 seconds before retrying.
+[2020-07-18 21:07:38Z INFO Terminal] WRITE LINE: 2020-07-18 21:07:38Z: Runner reconnected.
+[2020-07-18 21:11:48Z INFO MessageListener] No message retrieved from session '570f6cf7-7fa7-4fe3-aed9-59205a658be2' within last 30 minutes.
+[2020-07-18 21:13:38Z INFO Terminal] WRITE LINE: Exiting...
+[2020-07-18 21:13:38Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-07-18 21:13:38Z INFO ConfigurationStore] IsServiceConfigured: True
+[2020-07-18 21:13:38Z INFO Runner] Received Ctrl-C signal, stop Runner.Listener and Runner.Worker.
+[2020-07-18 21:13:38Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2020-07-18 21:13:38Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/xS3DMc8fuypaIvc6IH5KfwAZrUNp9lTOkYRQVRWO5s6OzTdBmU/_apis/distributedtask/pools/1/messages?sessionId=570f6cf7-7fa7-4fe3-aed9-59205a658be2 has been cancelled.
+[2020-07-18 21:13:38Z INFO MessageListener] Get next message has been cancelled.
+[2020-07-18 21:13:38Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2020-07-18 21:13:39Z INFO Listener] Runner execution been cancelled.

@@ -29,7 +29,25 @@ public class LehreServiceImpl implements LehreService {
     }
 
     @Override
-    public void deleteLehre(Long id) {
-        lehreDao.deleteLehre(id);
+    public String deleteLehre(Long id) {
+      lehreDao.deleteLehre(id);
+        return null;
     }
+
+    @Override
+    public List<Lehre> findByName(String firstName) {
+        return lehreDao.findByName(firstName);
+    }
+
+    @Override
+    public List<Lehre> findByLastName(String lastName) {
+        return lehreDao.findByLastName(lastName);
+    }
+
+    @Override
+    public List<Lehre> findByEmailId(String emailId) {
+        return lehreDao.findByEmailId(emailId);
+    }
+
+
 }

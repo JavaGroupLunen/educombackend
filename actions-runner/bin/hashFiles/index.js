@@ -35,7 +35,7 @@ module.exports =
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
 /******/ 		return __webpack_require__(349);
-/******/ 	};
+/******/ 	}
 /******/
 /******/ 	// run startup
 /******/ 	return startup();
@@ -1172,7 +1172,7 @@ class DefaultGlobber {
             for (const line of lines) {
                 // Empty or comment
                 if (!line || line.startsWith('#')) {
-                    continue;
+
                 }
                 // Pattern
                 else {
@@ -2393,7 +2393,7 @@ class Pattern {
                     // Escape
                     if (c2 === '\\' && !IS_WINDOWS && i2 + 1 < segment.length) {
                         set += segment[++i2];
-                        continue;
+
                     }
                     // Closed
                     else if (c2 === ']') {

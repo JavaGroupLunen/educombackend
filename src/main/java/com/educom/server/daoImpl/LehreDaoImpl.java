@@ -33,6 +33,18 @@ public class LehreDaoImpl implements LehreDao {
 
         return "success";
     }
+    @Override
+    public String updateLehre(Lehre lehre) {
+//        Lehre updatelehre =getLehre(lehre.getId());
+//        updatelehre.setId(lehre.getId());
+//        updatelehre.setEmailId(lehre.getEmailId());
+//        updatelehre.setFirstName(lehre.getFirstName());
+//        updatelehre.setLastName(lehre.getLastName());
+//        System.out.println(lehre.getId());
+        entityManager.merge(lehre);
+
+        return "success";
+    }
 
     @Override
     public Lehre getLehre(Long id) {
@@ -50,21 +62,21 @@ return "removed";
     @Override
     public List<Lehre> findByName(String firstName) {
         return entityManager.createQuery(
-                "from Lehre where firstName LIKE :firstName")
-                .setParameter("customName", firstName)
+                "from Lehre where firstName LIKE CONCAT('%', :firstName,'%')")
+                .setParameter("firstName", firstName)
                 .getResultList();
     }
     @Override
     public List<Lehre> findByLastName(String lastName) {
         return entityManager.createQuery(
-                "from Lehre where lastName LIKE :lastName")
+                "from Lehre where lastName  LIKE CONCAT('%', :lastName,'%')")
                 .setParameter("lastName", lastName)
                 .getResultList();
     }
     @Override
     public List<Lehre> findByEmailId(String emailId) {
         return entityManager.createQuery(
-                "from Lehre where emailId LIKE :emailId")
+                "from Lehre where emailId LIKE CONCAT('%',:emailId,'%')")
                 .setParameter("emailId", emailId)
                 .getResultList();
     }

@@ -54,7 +54,7 @@ function validate(/*Any*/instance,/*Object*/schema) {
 		// 						message: which indicates what the error was
 		//
 		return validate(instance, schema, {changing: false});//, coerce: false, existingOnly: false});
-	};
+	}
 exports.checkPropertyChange = function(/*Any*/value,/*Object*/schema, /*String*/property) {
 		// Summary:
 		// 		The checkPropertyChange method will check to see if an value can legally be in property with the given schema

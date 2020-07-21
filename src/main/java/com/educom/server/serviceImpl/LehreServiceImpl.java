@@ -49,5 +49,10 @@ public class LehreServiceImpl implements LehreService {
         return lehreDao.findByEmailId(emailId);
     }
 
+    @Override
+    public String updateLehre(Lehre lehre) {
+        return lehreDao.updateLehre(lehre);
+    }
+
 
 }

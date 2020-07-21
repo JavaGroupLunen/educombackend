@@ -35,8 +35,8 @@ public class LehreController {
         return new ResponseEntity<Lehre>(lehre, HttpStatus.OK);
     }
     @RequestMapping(value = "/findByName/{firstname}", method = RequestMethod.GET)
-    public ResponseEntity<List<Lehre>> lehreFindByName(@PathVariable("firstname") String firstname) {
-        List<Lehre> lehreList = lehreService.findByName(firstname);
+    public ResponseEntity<List<Lehre>> lehreFindByName(@PathVariable("firstname") String firstName) {
+        List<Lehre> lehreList = lehreService.findByName(firstName);
         return new ResponseEntity<List<Lehre>>(lehreList, HttpStatus.OK);
     }
     @RequestMapping(value = "/findByLastName/{lastName}", method = RequestMethod.GET)
@@ -51,15 +51,22 @@ public class LehreController {
     }
 
 
+
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)
     public String  deleteLehre(@PathVariable Long id) {
         return lehreService.deleteLehre(id);
 
     }
+//TODO: Es muss repariert werden. funksoniert nicht richtigt
+    @RequestMapping(value = "/updatelehre/{id}", method = RequestMethod.PUT)
+    public String updateLehre(@RequestBody Lehre lehre, @PathVariable Long id) {
 
-    @RequestMapping(value = "/updatelehre", method = RequestMethod.PUT)
-    public String updateLehre(@RequestBody Lehre updatelehre) {
-       return lehreService.saveLehreDetails(updatelehre);
+         Lehre updatelehre= lehreService.getLehre(id);
+         updatelehre.setEmailId(lehre.getEmailId());
+         updatelehre.setLastName(lehre.getLastName());
+         updatelehre.setFirstName(lehre.getFirstName());
+                    return lehreService.updateLehre(updatelehre);
+
     }
 
 

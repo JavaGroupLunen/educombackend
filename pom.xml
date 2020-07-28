@@ -11,9 +11,9 @@
     <groupId>com.educom</groupId>
     <artifactId>educom</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>educom</name>
-    <description>Demo project for Spring Boot</description>
+    <description> educom is project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,10 +23,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jersey</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

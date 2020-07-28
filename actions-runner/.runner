@@ -1,9 +1,0 @@
-﻿{
-  "agentId": 2,
-  "agentName": "educom",
-  "poolId": 1,
-  "poolName": "Default",
-  "serverUrl": "https://pipelines.actions.githubusercontent.com/xS3DMc8fuypaIvc6IH5KfwAZrUNp9lTOkYRQVRWO5s6OzTdBmU",
-  "gitHubUrl": "https://github.com/JavaGroupLunen/educombackend",
-  "workFolder": "_work"
-}

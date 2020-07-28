@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  educom-mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=educom
+      - MYSQL_DATABASE=educomdb
+      - MYSQL_USER=educomuser
+      - MYSQL_PASSWORD=root
+  educombackend:
+    image: educombackend
+    ports:
+     - 8280:8080
+    build:
+       context: ./
+       dockerfile: Dockerfile
+    depends_on:
+      - educom-mysql
+

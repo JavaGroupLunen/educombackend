@@ -34,15 +34,13 @@ public class LehreDaoImpl implements LehreDao {
         return "success";
     }
     @Override
-    public String updateLehre(Lehre lehre) {
-//        Lehre updatelehre =getLehre(lehre.getId());
-//        updatelehre.setId(lehre.getId());
-//        updatelehre.setEmailId(lehre.getEmailId());
-//        updatelehre.setFirstName(lehre.getFirstName());
-//        updatelehre.setLastName(lehre.getLastName());
-//        System.out.println(lehre.getId());
-        entityManager.merge(lehre);
-
+    public String updateLehre(Long id,Lehre lehre) {
+        Lehre updatelehre =getLehre(id);
+        updatelehre.setEmailId(lehre.getEmailId());
+        updatelehre.setFirstName(lehre.getFirstName());
+        updatelehre.setLastName(lehre.getLastName());
+        System.out.println(lehre.getId());
+        entityManager.merge(updatelehre);
         return "success";
     }
 

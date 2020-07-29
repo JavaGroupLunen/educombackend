@@ -50,8 +50,8 @@ public class LehreServiceImpl implements LehreService {
     }
 
     @Override
-    public String updateLehre(Lehre lehre) {
-        return lehreDao.updateLehre(lehre);
+    public String updateLehre(Long id,Lehre lehre) {
+        return lehreDao.updateLehre(id,lehre);
     }
 
 

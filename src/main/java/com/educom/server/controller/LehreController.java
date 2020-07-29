@@ -59,13 +59,9 @@ public class LehreController {
     }
 //TODO: Es muss repariert werden. funksoniert nicht richtigt
     @RequestMapping(value = "/updatelehre/{id}", method = RequestMethod.PUT)
-    public String updateLehre(@RequestBody Lehre lehre, @PathVariable Long id) {
-
-         Lehre updatelehre= lehreService.getLehre(id);
-         updatelehre.setEmailId(lehre.getEmailId());
-         updatelehre.setLastName(lehre.getLastName());
-         updatelehre.setFirstName(lehre.getFirstName());
-                    return lehreService.updateLehre(updatelehre);
+    public ResponseEntity<Lehre> updateLehre(@PathVariable("id") Long id,@RequestBody Lehre lehre) {
+        lehreService.updateLehre(id,lehre);
+        return new ResponseEntity<Lehre>(lehre, HttpStatus.OK);
 
     }
 

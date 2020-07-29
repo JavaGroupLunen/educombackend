@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  educom-mysql1:
+  educom-mysql:
     image: mysql:8.0
-    container_name: educom-mysql1
+    container_name: educom-mysql
     environment:
        MYSQL_ROOT_PASSWORD: educom
        MYSQL_DATABASE: educomdb
@@ -20,12 +20,12 @@ services:
     image: adoptopenjdk/openjdk11:alpine-jre
     container_name: educombackend
     ports:
-      - 8080:8080
+      - 8082:8082
     depends_on:
-      - educom-mysql1
+      - educom-mysql
     volumes:
-      - ./educom/educombackend/target/educom-0.0.1-SNAPSHOT.jar:/educom.jar
-    command: ["java", "-jar", "educom.jar"]
+      - ./target/educom-0.0.1-SNAPSHOT.jar:/educombackend.jar
+    command: ["java", "-jar", "educombackend.jar"]
 #    networks:
 #      - educomNetwork
 volumes:

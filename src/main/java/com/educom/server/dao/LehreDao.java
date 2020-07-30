@@ -12,6 +12,6 @@ public interface LehreDao {
     List<Lehre> findByName(String firstName);
     List<Lehre> findByLastName(String lastName);
     List<Lehre> findByEmailId(String emailId);
-     String updateLehre(Long id,Lehre lehre);
+    String updateLehre(Long id,Lehre lehre);
 
 }

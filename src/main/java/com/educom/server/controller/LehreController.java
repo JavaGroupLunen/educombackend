@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @EnableAutoConfiguration
+@RequestMapping("/lehre")
 public class LehreController {
     @Autowired
     private LehreService lehreService;

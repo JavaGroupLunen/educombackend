@@ -1,7 +1,8 @@
 package com.educom.server.entity;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="kurs")
@@ -13,16 +14,36 @@ public class Kurs {
     private String name;
     @Column(name = "raum", nullable = true)
     private String raum;
-    @OneToOne
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn()
     private Lehre lehre;
-    @ManyToMany
-    private List<Schuler> schulerList;
 
-    public Kurs(String name, String raum, Lehre lehre, List<Schuler> schulerList) {
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            },mappedBy = "kurses")
+    private Set<Schuler> schulerSet = new HashSet<>();
+
+    public Kurs(String name, String raum, Lehre lehre) {
         this.name = name;
         this.raum = raum;
         this.lehre = lehre;
-        this.schulerList = schulerList;
+       
+    }
+
+    public Kurs() {
+    }
+
+    public Kurs(String name, String raum) {
+    }
+
+    public Lehre getLehre() {
+        return lehre;
+    }
+
+    public void setLehre(Lehre lehre) {
+        this.lehre = lehre;
     }
 
     public long getId() {
@@ -49,19 +70,13 @@ public class Kurs {
         this.raum = raum;
     }
 
-    public Lehre getLehre() {
-        return lehre;
+
+
+    public Set<Schuler> getSchulerSet() {
+        return schulerSet;
     }
 
-    public void setLehre(Lehre lehre) {
-        this.lehre = lehre;
-    }
-
-    public List<Schuler> getSchulerList() {
-        return schulerList;
-    }
-
-    public void setSchulerList(List<Schuler> schulerList) {
-        this.schulerList = schulerList;
+    public void setSchulerSet(Set<Schuler> schulerSet) {
+        this.schulerSet = schulerSet;
     }
 }

@@ -52,14 +52,11 @@ public class SchulerController {
         return new ResponseEntity<List<Schuler>>(lehreList, HttpStatus.OK);
     }
 
-
-
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)
     public String  deleteLehre(@PathVariable Long id) {
         return schulerService.deleteSchuler(id);
 
     }
-    //TODO: Es muss repariert werden. funksoniert nicht richtigt
     @RequestMapping(value = "/updateschuler/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Schuler> updateLehre(@PathVariable("id") Long id,@RequestBody Schuler schuler) {
         schulerService.updateSchuler(id,schuler);

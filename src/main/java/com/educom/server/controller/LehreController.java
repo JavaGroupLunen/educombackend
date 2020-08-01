@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -50,7 +49,6 @@ public class LehreController {
         List<Lehre> lehreList = lehreService.findByEmailId(emailId);
         return new ResponseEntity<List<Lehre>>(lehreList, HttpStatus.OK);
     }
-
 
 
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)

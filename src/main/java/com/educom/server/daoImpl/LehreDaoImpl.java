@@ -21,7 +21,7 @@ public class LehreDaoImpl implements LehreDao {
     @Override
     public List<Lehre> getAllLehreList() {
 
-        List<Lehre> lehreList=entityManager.createQuery("from Lehre").getResultList();
+        List<Lehre> lehreList = entityManager.createQuery("from Lehre").getResultList();
 
         return lehreList;
     }
@@ -33,9 +33,10 @@ public class LehreDaoImpl implements LehreDao {
 
         return "success";
     }
+
     @Override
-    public String updateLehre(Long id,Lehre lehre) {
-        Lehre updatelehre =getLehre(id);
+    public String updateLehre(Long id, Lehre lehre) {
+        Lehre updatelehre = getLehre(id);
         updatelehre.setEmailId(lehre.getEmailId());
         updatelehre.setFirstName(lehre.getFirstName());
         updatelehre.setLastName(lehre.getLastName());
@@ -55,8 +56,9 @@ public class LehreDaoImpl implements LehreDao {
     public String deleteLehre(Long id) {
         Lehre lehre = getLehre(id);
         entityManager.remove(lehre);
-return "removed";
+        return "removed";
     }
+
     @Override
     public List<Lehre> findByName(String firstName) {
         return entityManager.createQuery(
@@ -64,6 +66,7 @@ return "removed";
                 .setParameter("firstName", firstName)
                 .getResultList();
     }
+
     @Override
     public List<Lehre> findByLastName(String lastName) {
         return entityManager.createQuery(
@@ -71,6 +74,7 @@ return "removed";
                 .setParameter("lastName", lastName)
                 .getResultList();
     }
+
     @Override
     public List<Lehre> findByEmailId(String emailId) {
         return entityManager.createQuery(

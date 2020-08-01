@@ -1,5 +1,6 @@
 package com.educom.server.entity;
 
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -16,21 +17,15 @@ public class Lehre {
         private String lastName;
         @Column(name = "email_address", nullable = false)
         private String emailId;
-        @ManyToMany
-        private List<Kurs> kursList;
 
-    public List<Kurs> getKursList() {
-        return kursList;
-    }
 
-    public void setKursList(List<Kurs> kursList) {
-        this.kursList = kursList;
-    }
+
 
     public Lehre(String firstName, String lastName, String emailId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
+
     }
 
     public Lehre() {
@@ -70,4 +65,6 @@ public class Lehre {
     public void setEmailId(String emailId) {
         this.emailId = emailId;
     }
+
+
 }

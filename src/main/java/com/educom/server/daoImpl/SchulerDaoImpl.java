@@ -69,10 +69,11 @@ public class SchulerDaoImpl implements SchulerDao {
     @Override
     public void updateSchuler(Long id, Schuler schuler) {
         Schuler updateschuler =getSchuler(id);
-        updateschuler.setEmailId(schuler.getEmailId());
+        updateschuler.setEmail(schuler.getEmail());
         updateschuler.setFirstName(schuler.getFirstName());
         updateschuler.setLastName(schuler.getLastName());
         System.out.println(schuler.getId());
         entityManager.merge(updateschuler);
+
     }
 }

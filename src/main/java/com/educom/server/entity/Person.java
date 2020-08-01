@@ -1,6 +1,7 @@
 package com.educom.server.entity;
 
 import com.sun.istack.NotNull;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -8,12 +9,15 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-@Entity
-@Table(name = "person")
-public class Person  implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+//@Entity
+//@Table(name = "person")
+@Getter
+@Setter
+
+public abstract class Person {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private long id;
     @NotNull
     @Column(name = "first_name")
     private String firstName;
@@ -49,10 +53,9 @@ public class Person  implements Serializable {
     @Size(max = 32)
     private String plz;
 
-    private String vater;
-    private String mutter;
+    private Long personTypeId;
 
-    public Person(String firstName, String lastName, String email, @Size(max = 15) String phoneNumber, Gender gender, Date geburstDatum, @Size(max = 200) String address, @Size(max = 100) String stadt, @Size(max = 100) String land, @Size(max = 32) String plz, String vater, String mutter) {
+    public Person(String firstName, String lastName, String email, @Size(max = 15) String phoneNumber, Gender gender, Date geburstDatum, @Size(max = 200) String address, @Size(max = 100) String stadt, @Size(max = 100) String land, @Size(max = 32) String plz, Long personTypeId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -63,19 +66,16 @@ public class Person  implements Serializable {
         this.stadt = stadt;
         this.land = land;
         this.plz = plz;
-        this.vater = vater;
-        this.mutter = mutter;
+        this.personTypeId = personTypeId;
     }
 
-    public Person(String firstName, String lastName, String emailId) {
+    public Person() {
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public Person(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
     }
 
     public String getFirstName() {
@@ -158,19 +158,11 @@ public class Person  implements Serializable {
         this.plz = plz;
     }
 
-    public String getVater() {
-        return vater;
+    public Long getPersonTypeId() {
+        return personTypeId;
     }
 
-    public void setVater(String vater) {
-        this.vater = vater;
-    }
-
-    public String getMutter() {
-        return mutter;
-    }
-
-    public void setMutter(String mutter) {
-        this.mutter = mutter;
+    public void setPersonTypeId(Long personTypeId) {
+        this.personTypeId = personTypeId;
     }
 }

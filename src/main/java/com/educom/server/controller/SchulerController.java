@@ -21,7 +21,7 @@ public class SchulerController {
 
     @RequestMapping(value = "/schuler", method = RequestMethod.POST)
     public String saveSchuler(@RequestBody JSONObject requestparam) {
-        Schuler schuler = new Schuler(requestparam.get("firstName").toString(), requestparam.get("lastName").toString(), requestparam.get("emailId").toString());
+        Schuler schuler = new Schuler(requestparam.get("firstName").toString(), requestparam.get("lastName").toString(), requestparam.get("email").toString());
         return schulerService.save(schuler);
     }
 

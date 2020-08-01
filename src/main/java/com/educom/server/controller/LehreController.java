@@ -56,7 +56,7 @@ public class LehreController {
         return lehreService.deleteLehre(id);
 
     }
-//TODO: Es muss repariert werden. funksoniert nicht richtigt
+
     @RequestMapping(value = "/updatelehre/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Lehre> updateLehre(@PathVariable("id") Long id,@RequestBody Lehre lehre) {
         lehreService.updateLehre(id,lehre);

@@ -8,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.logging.Logger;
+
 @Component
 public class SchulerServiceImpl implements SchulerService {
+    private static final Logger LOGGER = Logger.getLogger(SchulerServiceImpl.class.getName());
     @Autowired
     private SchulerDao schulerDao;
 

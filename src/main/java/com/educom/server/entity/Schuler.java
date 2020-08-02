@@ -16,7 +16,7 @@ import java.util.Set;
 public class Schuler extends Person{
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private long id;
+   private long id;
     private String vater;
     private String mutter;
 
@@ -42,5 +42,8 @@ public class Schuler extends Person{
     public Schuler() {
     }
 
+    public long getId() {
+        return id;
+    }
 
 }

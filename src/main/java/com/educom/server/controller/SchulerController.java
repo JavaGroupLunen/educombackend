@@ -1,6 +1,6 @@
 package com.educom.server.controller;
 
-import com.educom.server.entity.Lehre;
+
 import com.educom.server.entity.Schuler;
 import com.educom.server.services.SchulerService;
 import org.json.simple.JSONObject;
@@ -19,9 +19,12 @@ public class SchulerController {
     @Autowired
     private SchulerService schulerService;
 
-    @RequestMapping(value = "/schuler", method = RequestMethod.POST)
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String saveSchuler(@RequestBody JSONObject requestparam) {
-        Schuler schuler = new Schuler(requestparam.get("firstName").toString(), requestparam.get("lastName").toString(), requestparam.get("email").toString());
+        Schuler schuler = new Schuler();
+        schuler.setFirstName(requestparam.get("firstName").toString());
+        schuler.setLastName(requestparam.get("lastName").toString());
+        schuler.setEmail(requestparam.get("email").toString());
         return schulerService.save(schuler);
     }
 

@@ -72,7 +72,7 @@ public class SchulerDaoImpl implements SchulerDao {
         updateschuler.setEmail(schuler.getEmail());
         updateschuler.setFirstName(schuler.getFirstName());
         updateschuler.setLastName(schuler.getLastName());
-        System.out.println(schuler.getId());
+       // System.out.println(schuler.getId());
         entityManager.merge(updateschuler);
 
     }

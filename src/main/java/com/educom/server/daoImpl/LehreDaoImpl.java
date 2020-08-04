@@ -1,5 +1,6 @@
 package com.educom.server.daoImpl;
 
+import com.educom.server.dao.KursDao;
 import com.educom.server.dao.LehreDao;
 import com.educom.server.entity.Lehre;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,31 +14,27 @@ import java.util.List;
 @Component
 @Transactional
 @Repository
-public class LehreDaoImpl implements LehreDao {
+public class LehreDaoImpl implements LehreDao<Lehre> {
 
     @Autowired
     private EntityManager entityManager;
 
     @Override
-    public List<Lehre> getAllLehreList() {
-
+    public List<Lehre> getAll() {
         List<Lehre> lehreList = entityManager.createQuery("from Lehre").getResultList();
-
         return lehreList;
     }
 
     @Override
-    public String saveLehreDetails(Lehre lehre) {
-
+    public String save(Lehre lehre) {
         entityManager.merge(lehre);
-
         return "success";
     }
 
     @Override
-    public String updateLehre(Long id, Lehre lehre) {
-        Lehre updatelehre = getLehre(id);
-        updatelehre.setEmailId(lehre.getEmailId());
+    public String update(Long id, Lehre lehre) {
+        Lehre updatelehre = getById(id);
+        updatelehre.setEmail(lehre.getEmail());
         updatelehre.setFirstName(lehre.getFirstName());
         updatelehre.setLastName(lehre.getLastName());
         System.out.println(lehre.getId());
@@ -46,15 +43,14 @@ public class LehreDaoImpl implements LehreDao {
     }
 
     @Override
-    public Lehre getLehre(Long id) {
-
+    public Lehre getById(Long id) {
         Lehre obj = entityManager.find(Lehre.class, id);
         return obj;
     }
 
     @Override
-    public String deleteLehre(Long id) {
-        Lehre lehre = getLehre(id);
+    public String delete(Long id) {
+        Lehre lehre = getById(id);
         entityManager.remove(lehre);
         return "removed";
     }
@@ -67,7 +63,7 @@ public class LehreDaoImpl implements LehreDao {
                 .getResultList();
     }
 
-    @Override
+
     public List<Lehre> findByLastName(String lastName) {
         return entityManager.createQuery(
                 "from Lehre where lastName  LIKE CONCAT('%', :lastName,'%')")
@@ -75,11 +71,10 @@ public class LehreDaoImpl implements LehreDao {
                 .getResultList();
     }
 
-    @Override
-    public List<Lehre> findByEmailId(String emailId) {
+    public List<Lehre> findByEmail(String email) {
         return entityManager.createQuery(
                 "from Lehre where emailId LIKE CONCAT('%',:emailId,'%')")
-                .setParameter("emailId", emailId)
+                .setParameter("emailId", email)
                 .getResultList();
     }
 

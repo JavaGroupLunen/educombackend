@@ -14,23 +14,23 @@ public class LehreServiceImpl implements LehreService {
 
     @Override
     public List<Lehre> getAllLehreList() {
-        return lehreDao.getAllLehreList();
+        return lehreDao.getAll();
     }
 
     @Override
     public String saveLehreDetails(Lehre lehre) {
 
-        return lehreDao.saveLehreDetails(lehre);
+        return lehreDao.save(lehre);
     }
 
     @Override
     public Lehre getLehre(Long id) {
-        return lehreDao.getLehre(id);
+        return (Lehre) lehreDao.getById(id);
     }
 
     @Override
     public String deleteLehre(Long id) {
-      lehreDao.deleteLehre(id);
+      lehreDao.delete(id);
         return null;
     }
 
@@ -45,13 +45,13 @@ public class LehreServiceImpl implements LehreService {
     }
 
     @Override
-    public List<Lehre> findByEmailId(String emailId) {
-        return lehreDao.findByEmailId(emailId);
+    public List<Lehre> findByEmailId(String email) {
+        return lehreDao.findByEmail(email);
     }
 
     @Override
     public String updateLehre(Long id,Lehre lehre) {
-        return lehreDao.updateLehre(id,lehre);
+        return lehreDao.update(id,lehre);
     }
 
 

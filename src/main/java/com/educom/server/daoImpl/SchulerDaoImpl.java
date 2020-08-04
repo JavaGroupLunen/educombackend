@@ -1,12 +1,12 @@
 package com.educom.server.daoImpl;
 
+
 import com.educom.server.dao.SchulerDao;
 import com.educom.server.entity.Schuler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.logging.Level;
@@ -23,25 +23,26 @@ public class SchulerDaoImpl implements SchulerDao {
     @Override
     public String save(Schuler schuler) {
         if(schuler==null){
-            LOGGER.log(Level.SEVERE,	"Schuler is null. ");
+            LOGGER.log(Level.SEVERE,"Schuler is null. ");
             return null;
         }
-        entityManager.merge(schuler);
+        entityManager.persist(schuler);
         return "success";
     }
 
     @Override
-    public List<Schuler> getAllSchuler() {
+    public List<Schuler> getAll() {
         List<Schuler> schulerList=entityManager.createQuery("from Schuler").getResultList();
         if(schulerList.isEmpty()){
             LOGGER.log(Level.SEVERE,	"Keine Schuler in der Datenbank registriert");
             return null;
-        }
+       }
         return schulerList;
     }
 
+
     @Override
-    public Schuler getSchuler(Long id) {
+    public Schuler getById(Long id) {
         Schuler obj = entityManager.find(Schuler.class, id);
         if(obj==null){
             LOGGER.log(Level.SEVERE,	"Keine Schuler mit Id : "+id+" in der Datenbank registriert");
@@ -64,35 +65,43 @@ public class SchulerDaoImpl implements SchulerDao {
         }
         return null;
     }
-    @Override
+
+
+
     public List<Schuler> findByLastName(String lastName) {
         return entityManager.createQuery(
                 "from Schuler where lastName  LIKE CONCAT('%', :lastName,'%')")
                 .setParameter("lastName", lastName)
                 .getResultList();
     }
-    @Override
-    public List<Schuler> findByEmailId(String emailId) {
+
+    public List<Schuler> findByEmail(String email) {
         return entityManager.createQuery(
-                "from Schuler where emailId LIKE CONCAT('%',:emailId,'%')")
-                .setParameter("emailId", emailId)
+                "from Schuler where email LIKE CONCAT('%',:email,'%')")
+                .setParameter("email", email)
                 .getResultList();
     }
 
     @Override
-    public String deleteSchuler(Long id) {
-        Schuler schuler = getSchuler(id);
+    public String delete(Long id) {
+        Schuler schuler = getById(id);
         entityManager.remove(schuler);
         return "removed";
     }
 
     @Override
-    public void updateSchuler(Long id, Schuler schuler) {
-        Schuler updateschuler =getSchuler(id);
+    public String update(Long id, Schuler schuler) {
+        Schuler updateschuler =getById(id);
         updateschuler.setEmail(schuler.getEmail());
         updateschuler.setFirstName(schuler.getFirstName());
         updateschuler.setLastName(schuler.getLastName());
+        updateschuler.setAdres(schuler.getAdres());
+        updateschuler.setStadt(schuler.getStadt());
+        updateschuler.setPhoneNumber(schuler.getPhoneNumber());
+        updateschuler.setGeburstDatum(schuler.getGeburstDatum());
+        updateschuler.setPlz(schuler.getPlz());
         entityManager.merge(updateschuler);
+        return "updated";
 
     }
 }

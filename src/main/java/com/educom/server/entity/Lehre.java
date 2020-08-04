@@ -16,15 +16,15 @@ public class Lehre {
         @Column(name = "last_name", nullable = false)
         private String lastName;
         @Column(name = "email_address", nullable = false)
-        private String emailId;
+        private String email;
 
 
 
 
-    public Lehre(String firstName, String lastName, String emailId) {
+    public Lehre(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailId = emailId;
+        this.email = email;
 
     }
 
@@ -58,12 +58,12 @@ public class Lehre {
         this.lastName = lastName;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String emailId) {
+        this.email = emailId;
     }
 
 

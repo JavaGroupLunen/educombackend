@@ -1,21 +1,33 @@
 package com.educom.server.entity;
 
 
+import lombok.ToString;
+
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.Date;
 
 
 @MappedSuperclass
+@ToString
 public abstract class  Person {
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
-   private long id;
-   private  String firstName;
-   private  String lastName ;
-   private  String email;
+   protected long id;
+    protected  String firstName;
+    protected  String lastName ;
+    protected  String email;
+    protected String phoneNumber;
+    @Enumerated(EnumType.STRING)
+    protected Gender gender;
+    @Temporal(TemporalType.DATE)
+    protected Date geburstDatum;
+    protected String adres;
+    protected String stadt;
+    protected String land;
+    protected String plz;
 
-   public void setId(long id) {
+
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -43,28 +55,64 @@ public abstract class  Person {
         this.email = email;
     }
 
+    public long getId() {
+        return id;
+    }
 
-    private String phoneNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-    @Enumerated(EnumType.STRING)
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-    private Gender gender;
+    public Gender getGender() {
+        return gender;
+    }
 
-    @Temporal(TemporalType.DATE)
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
-    private Date geburstDatum;
+    public Date getGeburstDatum() {
+        return geburstDatum;
+    }
 
+    public void setGeburstDatum(Date geburstDatum) {
+        this.geburstDatum = geburstDatum;
+    }
 
-    private String address;
+    public String getAdres() {
+        return adres;
+    }
 
+    public void setAdres(String adres) {
+        this.adres = adres;
+    }
 
-    private String stadt;
+    public String getStadt() {
+        return stadt;
+    }
 
+    public void setStadt(String stadt) {
+        this.stadt = stadt;
+    }
 
-    private String land;
+    public String getLand() {
+        return land;
+    }
 
+    public void setLand(String land) {
+        this.land = land;
+    }
 
-    private String plz;
+    public String getPlz() {
+        return plz;
+    }
 
+    public void setPlz(String plz) {
+        this.plz = plz;
+    }
 
 }

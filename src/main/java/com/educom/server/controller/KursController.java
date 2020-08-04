@@ -3,6 +3,7 @@ import com.educom.server.entity.Kurs;
 import com.educom.server.services.CrudService;
 
 
+import com.educom.server.services.KursService;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -17,40 +18,40 @@ import java.util.List;
 @RequestMapping("/kurs")
 public class KursController {
     @Autowired
-    private CrudService kursService;
+    private KursService kursService;
 
     @RequestMapping(value = "/kurs", method = RequestMethod.POST)
     public String savekurs(@RequestBody JSONObject requestparam) {
         Kurs kurs = new Kurs(requestparam.get("name").toString(), requestparam.get("raum").toString());
-        return kursService.save(kurs);
+        return kursService.saveKurs(kurs);
     }
 
     @RequestMapping(value = "/kurslist", method = RequestMethod.GET)
     public ResponseEntity<List<Kurs>> showkursList() {
-        List<Kurs> kursList = kursService.getAll();
+        List<Kurs> kursList = kursService.getAllKurs();
         return new ResponseEntity<List<Kurs>>(kursList, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/getbyId/{id}", method = RequestMethod.GET)
     public ResponseEntity<Kurs> getLehre(@PathVariable("id") Long id) {
-        Kurs kurs = (Kurs) kursService.getById(id);
+        Kurs kurs = (Kurs) kursService.getKurs(id);
         return new ResponseEntity<Kurs>(kurs, HttpStatus.OK);
     }
     @RequestMapping(value = "/findByName/{firstname}", method = RequestMethod.GET)
     public ResponseEntity<List<Kurs>> lehreFindByName(@PathVariable("firstname") String firstName) {
-        List<Kurs> kursList = kursService.findByName(firstName);
+        List<Kurs> kursList = kursService.findByKursName(firstName);
         return new ResponseEntity<List<Kurs>>(kursList, HttpStatus.OK);
     }
 
 
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)
     public String  delete(@PathVariable Long id) {
-        return kursService.delete(id);
+        return kursService.deleteLehre(id);
 
     }
-    @RequestMapping(value = "/updateschuler/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Kurs> updateLehre(@PathVariable("id") Long id,@RequestBody Kurs kurs) {
-        kursService.update(id,kurs);
+        kursService.updateKurs(id,kurs);
         return new ResponseEntity<Kurs>(kurs, HttpStatus.OK);
 
     }

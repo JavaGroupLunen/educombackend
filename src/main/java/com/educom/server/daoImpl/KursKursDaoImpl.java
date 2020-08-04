@@ -1,6 +1,6 @@
 package com.educom.server.daoImpl;
 
-import com.educom.server.dao.Dao;
+import com.educom.server.dao.KursDao;
 import com.educom.server.entity.Kurs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import java.util.List;
 @Component
 @Transactional
 @Repository
-public class KursDaoImpl implements Dao<Kurs> {
+public class KursKursDaoImpl implements KursDao<Kurs> {
     @Autowired
     private EntityManager entityManager;
 
@@ -26,7 +26,6 @@ public class KursDaoImpl implements Dao<Kurs> {
     @Override
     public String save(Kurs kurs) {
         entityManager.merge(kurs);
-
         return "success";
     }
 

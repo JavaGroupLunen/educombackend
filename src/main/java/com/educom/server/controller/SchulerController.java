@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -20,49 +21,49 @@ public class SchulerController {
     private SchulerService schulerService;
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String saveSchuler(@RequestBody JSONObject requestparam) {
-        Schuler schuler = new Schuler();
-        schuler.setFirstName(requestparam.get("firstName").toString());
-        schuler.setLastName(requestparam.get("lastName").toString());
-        schuler.setEmail(requestparam.get("email").toString());
+    public String save(@RequestBody Schuler schuler) {
+        System.out.println(schuler.toString());
         return schulerService.save(schuler);
     }
 
     @RequestMapping(value = "/schulerlist", method = RequestMethod.GET)
-    public ResponseEntity<List<Schuler>> showSchulerList() {
-        List<Schuler> schulerList = schulerService.getAllSchuler();
+    public ResponseEntity<List<Schuler>> showList() {
+        List<Schuler> schulerList = schulerService.getAll();
+//       schulerList.forEach((e)->{
+//           System.out.println(e.toString());
+//       });
         return new ResponseEntity<List<Schuler>>(schulerList, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/getbyId/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Schuler> getLehre(@PathVariable("id") Long id) {
-        Schuler schuler = schulerService.getSchuler(id);
+    public ResponseEntity<Schuler> getById(@PathVariable("id") Long id) {
+        Schuler schuler = (Schuler) schulerService.getById(id);
         return new ResponseEntity<Schuler>(schuler, HttpStatus.OK);
     }
     @RequestMapping(value = "/findByName/{firstname}", method = RequestMethod.GET)
-    public ResponseEntity<List<Schuler>> lehreFindByName(@PathVariable("firstname") String firstName) {
+    public ResponseEntity<List<Schuler>> findByName(@PathVariable("firstname") String firstName) {
         List<Schuler> schulerList = schulerService.findByName(firstName);
         return new ResponseEntity<List<Schuler>>(schulerList, HttpStatus.OK);
     }
     @RequestMapping(value = "/findByLastName/{lastName}", method = RequestMethod.GET)
-    public ResponseEntity<List<Schuler>> lehreFindByLastName(@PathVariable("lastName") String lastName) {
+    public ResponseEntity<List<Schuler>> findByLastName(@PathVariable("lastName") String lastName) {
         List<Schuler> schulerList = schulerService.findByLastName(lastName);
         return new ResponseEntity<List<Schuler>>(schulerList, HttpStatus.OK);
     }
-    @RequestMapping(value = "/findByEmailId/{emailId}", method = RequestMethod.GET)
-    public ResponseEntity<List<Schuler>> lehreFindByEmailId(@PathVariable("emailId") String emailId) {
-        List<Schuler> lehreList = schulerService.findByEmailId(emailId);
+    @RequestMapping(value = "/findByEmail/{email}", method = RequestMethod.GET)
+    public ResponseEntity<List<Schuler>> findByEmail(@PathVariable("email") String email) {
+        List<Schuler> lehreList = schulerService.findByEmail(email);
         return new ResponseEntity<List<Schuler>>(lehreList, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)
     public String  deleteLehre(@PathVariable Long id) {
-        return schulerService.deleteSchuler(id);
+        return schulerService.delete(id);
 
     }
     @RequestMapping(value = "/updateschuler/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Schuler> updateLehre(@PathVariable("id") Long id,@RequestBody Schuler schuler) {
-        schulerService.updateSchuler(id,schuler);
+        schulerService.update(id,schuler);
         return new ResponseEntity<Schuler>(schuler, HttpStatus.OK);
 
     }

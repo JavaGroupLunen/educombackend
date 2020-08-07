@@ -4,6 +4,8 @@ services:
   educom-mysql:
     image: mysql:8.0
     container_name: educom-mysql
+    security_opt:
+      - seccomp:unconfined
     environment:
        MYSQL_ROOT_PASSWORD: educom
        MYSQL_DATABASE: educomdb
@@ -21,6 +23,9 @@ services:
     container_name: educombackend
     ports:
       - 8082:8082
+    environment:
+      MYSQL_USER: educomuser
+      MYSQL_PASSWORD: root
     depends_on:
       - educom-mysql
     volumes:
@@ -28,6 +33,8 @@ services:
     command: ["java", "-jar", "educombackend.jar"]
 #    networks:
 #      - educomNetwork
+    links:
+      - educom-mysql
 volumes:
   educomdb:
 #networks:

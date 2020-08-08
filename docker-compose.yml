@@ -24,6 +24,8 @@ services:
       dockerfile: Dockerfile
 #    image: adoptopenjdk/openjdk11:alpine-jre
     container_name: educombackend
+    security_opt:
+      - seccomp:unconfined
     depends_on:
       - educom-mysql
     ports:

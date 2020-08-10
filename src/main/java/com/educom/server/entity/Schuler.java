@@ -1,8 +1,6 @@
 package com.educom.server.entity;
 
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -96,7 +94,7 @@ public class Schuler extends Person{
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", gender=" + gender +
                 ", geburstDatum=" + geburstDatum +
-                ", adres='" + adres + '\'' +
+                ", adres='" + adresse + '\'' +
                 ", stadt='" + stadt + '\'' +
                 ", land='" + land + '\'' +
                 ", plz='" + plz + '\'' +

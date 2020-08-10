@@ -5,66 +5,43 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="lehre")
-public class Lehre {
+@Table(name = "lehre")
+public class Lehre extends Person {
+    private Double stundenLohn;
+    @ManyToOne(fetch= FetchType.EAGER)
+    @JoinColumn()
+    private VerfugbarkeitFurLehre verfugbarkeitFurLehre;
+    @OneToMany()
+    private List<Kurs> kanngeben;
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        private long id;
-        @Column(name = "first_name", nullable = false)
-        private String firstName;
-        @Column(name = "last_name", nullable = false)
-        private String lastName;
-        @Column(name = "email_address", nullable = false)
-        private String email;
-
-
-
-
-    public Lehre(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-
+    public Lehre(Double stundenLohn) {
+        this.stundenLohn = stundenLohn;
     }
 
     public Lehre() {
     }
 
-    public Lehre(Object value) {
+    public Double getStundenLohn() {
+        return stundenLohn;
     }
 
-    public long getId() {
-        return id;
+    public void setStundenLohn(Double stundenLohn) {
+        this.stundenLohn = stundenLohn;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public VerfugbarkeitFurLehre getVerfugbarkeitFurLehre() {
+        return verfugbarkeitFurLehre;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public void setVerfugbarkeitFurLehre(VerfugbarkeitFurLehre verfugbarkeitFurLehre) {
+        this.verfugbarkeitFurLehre = verfugbarkeitFurLehre;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public List<Kurs> getKanngeben() {
+        return kanngeben;
     }
 
-    public String getLastName() {
-        return lastName;
+    public void setKanngeben(List<Kurs> kanngeben) {
+        this.kanngeben = kanngeben;
     }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String emailId) {
-        this.email = emailId;
-    }
-
-
 }

@@ -21,7 +21,7 @@ public abstract class  Person {
     protected Gender gender;
     @Temporal(TemporalType.DATE)
     protected Date geburstDatum;
-    protected String adres;
+    protected String adresse;
     protected String stadt;
     protected String land;
     protected String plz;
@@ -83,12 +83,12 @@ public abstract class  Person {
         this.geburstDatum = geburstDatum;
     }
 
-    public String getAdres() {
-        return adres;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setAdres(String adres) {
-        this.adres = adres;
+    public void setAdresse(String adres) {
+        this.adresse = adres;
     }
 
     public String getStadt() {

@@ -95,7 +95,7 @@ public class SchulerDaoImpl implements SchulerDao {
         updateschuler.setEmail(schuler.getEmail());
         updateschuler.setFirstName(schuler.getFirstName());
         updateschuler.setLastName(schuler.getLastName());
-        updateschuler.setAdres(schuler.getAdres());
+        updateschuler.setAdresse(schuler.getAdresse());
         updateschuler.setStadt(schuler.getStadt());
         updateschuler.setPhoneNumber(schuler.getPhoneNumber());
         updateschuler.setGeburstDatum(schuler.getGeburstDatum());

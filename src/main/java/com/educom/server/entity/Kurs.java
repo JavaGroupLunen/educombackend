@@ -1,6 +1,7 @@
 package com.educom.server.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,11 +15,18 @@ public class Kurs {
     private String name;
     @Column(name = "raum", nullable = true)
     private String raum;
-    @ManyToOne(fetch=FetchType.LAZY)
+    private Double price;
+    private int dauer;
+    private int kurslang;
+    private Date anfangenAb;
+    private Date endeBis;
+    @Enumerated(EnumType.STRING)
+    private KursType kurstype;
+    @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn()
     private Lehre lehre;
 
-    @ManyToMany(fetch = FetchType.LAZY,
+    @ManyToMany(fetch = FetchType.EAGER,
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE

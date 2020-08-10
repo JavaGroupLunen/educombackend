@@ -1,4 +1,5 @@
 package com.educom.server.controller;
+import com.educom.server.dao.KursRepo;
 import com.educom.server.entity.Kurs;
 import com.educom.server.services.CrudService;
 
@@ -19,6 +20,8 @@ import java.util.List;
 public class KursController {
     @Autowired
     private KursService kursService;
+    @Autowired
+    private KursRepo kursRepo;
 
     @RequestMapping(value = "/kurs", method = RequestMethod.POST)
     public String savekurs(@RequestBody Kurs requestparam) {

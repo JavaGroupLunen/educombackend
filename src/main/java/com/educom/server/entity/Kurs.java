@@ -15,10 +15,10 @@ public class Kurs {
     private String name;
     @Column(name = "raum", nullable = true)
     private String raum;
-    private Double price;
+    private Double kosten;
     private int dauer;
     private int kurslang;
-    private Date anfangenAb;
+    private Date anfangAb;
     private Date endeBis;
     @Enumerated(EnumType.STRING)
     private KursType kurstype;
@@ -46,14 +46,6 @@ public class Kurs {
     public Kurs(String name, String raum) {
     }
 
-    public Lehre getLehre() {
-        return lehre;
-    }
-
-    public void setLehre(Lehre lehre) {
-        this.lehre = lehre;
-    }
-
     public long getId() {
         return id;
     }
@@ -78,7 +70,61 @@ public class Kurs {
         this.raum = raum;
     }
 
+    public Double getKosten() {
+        return kosten;
+    }
 
+    public void setKosten(Double kosten) {
+        this.kosten = kosten;
+    }
+
+    public int getDauer() {
+        return dauer;
+    }
+
+    public void setDauer(int dauer) {
+        this.dauer = dauer;
+    }
+
+    public int getKurslang() {
+        return kurslang;
+    }
+
+    public void setKurslang(int kurslang) {
+        this.kurslang = kurslang;
+    }
+
+    public Date getAnfangAb() {
+        return anfangAb;
+    }
+
+    public void setAnfangAb(Date anfangAb) {
+        this.anfangAb = anfangAb;
+    }
+
+    public Date getEndeBis() {
+        return endeBis;
+    }
+
+    public void setEndeBis(Date endeBis) {
+        this.endeBis = endeBis;
+    }
+
+    public KursType getKurstype() {
+        return kurstype;
+    }
+
+    public void setKurstype(KursType kurstype) {
+        this.kurstype = kurstype;
+    }
+
+    public Lehre getLehre() {
+        return lehre;
+    }
+
+    public void setLehre(Lehre lehre) {
+        this.lehre = lehre;
+    }
 
     public Set<Schuler> getSchulerSet() {
         return schulerSet;

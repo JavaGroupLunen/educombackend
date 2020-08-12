@@ -10,13 +10,13 @@ import java.util.Set;
 
 @Entity
 @Table(name="schuler")
-@ToString
 public class Schuler extends Person{
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
     //private long id;
     private String vater;
     private String mutter;
+    private String klasse;
 
     @ManyToOne
     @JoinColumn(name = "schule_id")
@@ -45,7 +45,15 @@ public class Schuler extends Person{
         this.id = id;
     }
 
- public String getVater() {
+    public String getKlasse() {
+        return klasse;
+    }
+
+    public void setKlasse(String klasse) {
+        this.klasse = klasse;
+    }
+
+    public String getVater() {
   return vater;
  }
 

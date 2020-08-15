@@ -5,7 +5,7 @@ import com.educom.server.services.CrudService;
 
 
 import com.educom.server.services.KursService;
-import org.json.simple.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.HttpStatus;

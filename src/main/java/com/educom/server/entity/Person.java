@@ -1,14 +1,14 @@
 package com.educom.server.entity;
 
 
-import lombok.ToString;
+
 
 import javax.persistence.*;
 import java.util.Date;
 
 
 @MappedSuperclass
-@ToString
+
 public abstract class  Person {
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)

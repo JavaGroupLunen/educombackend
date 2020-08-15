@@ -1,7 +1,6 @@
 package com.educom.server.entity;
 
 
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.HashSet;

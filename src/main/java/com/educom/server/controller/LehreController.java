@@ -2,10 +2,11 @@ package com.educom.server.controller;
 
 import com.educom.server.entity.Lehre;
 import com.educom.server.services.LehreService;
-import org.json.simple.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class LehreController {
     private LehreService lehreService;
 
     @RequestMapping(value = "/lehre", method = RequestMethod.POST)
+    @PreAuthorize("hasAuthority('student:write')")
     public String saveLehre(@RequestBody Lehre requestparam) {
        // Lehre lehre = new Lehre(requestparam.get("firstName").toString(), requestparam.get("lastName").toString(), requestparam.get("emailId").toString());
         return lehreService.saveLehreDetails(requestparam);

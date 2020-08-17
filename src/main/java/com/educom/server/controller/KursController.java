@@ -1,11 +1,8 @@
 package com.educom.server.controller;
+
 import com.educom.server.dao.KursRepo;
 import com.educom.server.entity.Kurs;
-import com.educom.server.services.CrudService;
-
-
 import com.educom.server.services.KursService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.HttpStatus;

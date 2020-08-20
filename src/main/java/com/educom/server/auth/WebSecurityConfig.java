@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
 
-
     @Autowired
     UserDetailsService userDetailsService;
     @Autowired
@@ -49,7 +48,7 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
+//TODO: PAssword encoding necessary
     @Bean
     public PasswordEncoder getPasswordEncoder(){
         return NoOpPasswordEncoder.getInstance();

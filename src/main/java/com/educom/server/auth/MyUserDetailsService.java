@@ -1,5 +1,6 @@
 package com.educom.server.auth;
 
+import com.educom.server.entity.EducomUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,7 +15,7 @@ public class MyUserDetailsService implements UserDetailsService {
     UserRepository userRepository;
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-      Optional<User> user= userRepository.findByUserName(s);
+      Optional<EducomUser> user= userRepository.findByUserName(s);
       user.orElseThrow(()->new UsernameNotFoundException("Not found: "+ s));
       return user.map(MyUserDetails::new).get();
 

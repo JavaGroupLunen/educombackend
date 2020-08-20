@@ -4,15 +4,15 @@ package com.educom.server.entity;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 
 @MappedSuperclass
-
-public abstract class  Person {
-   @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   protected long id;
+public abstract class  Person implements Serializable {
+//   @Id
+//   @GeneratedValue(strategy = GenerationType.AUTO)
+//   protected long id;
     protected  String firstName;
     protected  String lastName ;
     protected  String email;
@@ -26,10 +26,10 @@ public abstract class  Person {
     protected String land;
     protected String plz;
 
-
-    public void setId(long id) {
-        this.id = id;
-    }
+//
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     public String getFirstName() {
         return firstName;
@@ -54,10 +54,10 @@ public abstract class  Person {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public long getId() {
-        return id;
-    }
+//
+//    public long getId() {
+//        return id;
+//    }
 
     public String getPhoneNumber() {
         return phoneNumber;

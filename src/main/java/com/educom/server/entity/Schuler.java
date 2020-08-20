@@ -10,9 +10,9 @@ import java.util.Set;
 @Entity
 @Table(name="schuler")
 public class Schuler extends Person{
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    //private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String vater;
     private String mutter;
     private String klasse;
@@ -34,12 +34,10 @@ public class Schuler extends Person{
     )
     private Set<Kurs> kurses = new HashSet<>();
 
-    @Override
     public long getId() {
         return id;
     }
 
-    @Override
     public void setId(long id) {
         this.id = id;
     }

@@ -1,15 +1,20 @@
 package com.educom.server.entity;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "vertrag")
-public class Vertrag {
+public class Vertrag implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Temporal(TemporalType.TIMESTAMP)
+    @CreatedDate
     private Date vertragsdatum;
     private Date vertragsbegin;
     private Date vertragsende;

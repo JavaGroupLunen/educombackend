@@ -16,5 +16,27 @@ public class Schule  {
     @OneToMany(mappedBy = "schule", fetch = FetchType.EAGER)
     private List<Schuler> Schulerlist = new LinkedList<>();
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Schuler> getSchulerlist() {
+        return Schulerlist;
+    }
+
+    public void setSchulerlist(List<Schuler> schulerlist) {
+        Schulerlist = schulerlist;
+    }
 }

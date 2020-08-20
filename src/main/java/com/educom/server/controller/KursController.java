@@ -17,8 +17,7 @@ import java.util.List;
 public class KursController {
     @Autowired
     private KursService kursService;
-    @Autowired
-    private KursRepo kursRepo;
+
 
     @RequestMapping(value = "/kurs", method = RequestMethod.POST)
     public String savekurs(@RequestBody Kurs requestparam) {

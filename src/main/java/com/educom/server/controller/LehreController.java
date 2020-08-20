@@ -19,7 +19,6 @@ public class LehreController {
     private LehreService lehreService;
 
     @RequestMapping(value = "/lehre", method = RequestMethod.POST)
-
     public String saveLehre(@RequestBody Lehre requestparam) {
        // Lehre lehre = new Lehre(requestparam.get("firstName").toString(), requestparam.get("lastName").toString(), requestparam.get("emailId").toString());
         return lehreService.saveLehreDetails(requestparam);

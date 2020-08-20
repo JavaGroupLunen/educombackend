@@ -7,6 +7,9 @@ import java.util.List;
 @Entity
 @Table(name = "lehre")
 public class Lehre extends Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    protected long id;
     private Double stundenLohn;
     @ManyToOne(fetch= FetchType.EAGER)
     @JoinColumn()
@@ -19,6 +22,14 @@ public class Lehre extends Person {
     }
 
     public Lehre() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Double getStundenLohn() {

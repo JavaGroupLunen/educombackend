@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/auth")
 public class HomeController {
 @Autowired
 private AuthenticationManager authenticationManager;
@@ -32,7 +33,7 @@ private AuthenticationManager authenticationManager;
     public String admin() {
         return ("<h1>Welcome Admin</h1>");
     }
-    @RequestMapping(value="/authenticate",method= RequestMethod.POST)
+    @RequestMapping(value="/signin",method= RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest)
             throws Exception{
         try {

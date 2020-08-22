@@ -17,6 +17,25 @@ public class MyUserDetails implements UserDetails {
     private List<GrantedAuthority> authorities;
 
 
+    public MyUserDetails(String userName, String password, boolean active, List<GrantedAuthority> authorities) {
+        this.userName = userName;
+        this.password = password;
+        this.active = active;
+        this.authorities = authorities;
+    }
+
+    public static MyUserDetails build(EducomUser user) {
+        List<GrantedAuthority> authorities = user.getRoles().stream()
+                .map(role -> new SimpleGrantedAuthority(role.getName().name()))
+                .collect(Collectors.toList());
+
+        return new MyUserDetails(
+                user.getUserName(),
+                user.getPassword(),
+                user.isActive(),
+                authorities);
+    }
+
     public MyUserDetails(String userName){
         this.userName=userName;
     }
@@ -28,7 +47,7 @@ public class MyUserDetails implements UserDetails {
         this.userName= educomUser.getUserName();
         this.password= educomUser.getPassword();
         this.active= educomUser.isActive();
-        this.authorities=Arrays.stream(educomUser.getRoles().split(",")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+      //  this.authorities=Arrays.stream(educomUser.getRoles().split(",")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
     }
 
     public String getUserName() {

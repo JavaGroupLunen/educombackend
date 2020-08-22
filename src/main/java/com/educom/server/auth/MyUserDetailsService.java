@@ -20,4 +20,11 @@ public class MyUserDetailsService implements UserDetailsService {
       return user.map(MyUserDetails::new).get();
 
     }
+
+    public UserDetails loadUserByEmail(String s) throws UsernameNotFoundException {
+        Optional<EducomUser> user= userRepository.findByEmail(s);
+        user.orElseThrow(()->new UsernameNotFoundException("Not found: "+ s));
+        return user.map(MyUserDetails::new).get();
+
+    }
 }

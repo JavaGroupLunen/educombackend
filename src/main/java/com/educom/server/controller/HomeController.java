@@ -3,6 +3,7 @@ import com.educom.server.auth.AuthenticationRequest;
 import com.educom.server.auth.MyUserDetailsService;
 import com.educom.server.auth.jwt.AuthenticationResponse;
 import com.educom.server.auth.jwt.JwtUtil;
+import com.educom.server.auth.jwt.SignupRequest;
 import com.educom.server.entity.EducomUser;
 import com.educom.server.entity.Schuler;
 import com.educom.server.serviceImpl.EducomUserServiceImpl;
@@ -35,12 +36,14 @@ private AuthenticationManager authenticationManager;
     private EducomUserService educomUserService;
 
     @RequestMapping(value="/register", method= RequestMethod.POST)
-    public String save(@RequestBody EducomUser educomUser) {
-        System.out.println(educomUser.toString());
-        return educomUserService.save(educomUser);
+    public String save(@RequestBody SignupRequest signupRequest) {
+        System.out.println(signupRequest.toString());
+
+
+        return educomUserService.save(signupRequest);
     }
 
-    @RequestMapping(value = "/userList", method = RequestMethod.GET)
+    @RequestMapping(value = "/userlist", method = RequestMethod.GET)
     public ResponseEntity<List<EducomUser>> showList() {
         List<EducomUser> educomUserList = educomUserService.getAll();
 //       schulerList.forEach((e)->{
@@ -62,7 +65,7 @@ private AuthenticationManager authenticationManager;
 
 
     @RequestMapping(value="/signin",method= RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest)
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody SignupRequest authenticationRequest)
             throws Exception{
         try {
             authenticationManager.authenticate(

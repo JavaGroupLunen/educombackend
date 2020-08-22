@@ -30,12 +30,13 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-       auth.userDetailsService(userDetailsService);
+       auth.userDetailsService(userDetailsService)
+       .passwordEncoder(getPasswordEncoder());
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http.cors().and().csrf().disable()
                 .authorizeRequests().antMatchers("/auth/signin","/auth/register").permitAll()
                 .anyRequest().authenticated().and()
                 .exceptionHandling().and().sessionManagement()//chain ile kontrolü ekledik
@@ -51,6 +52,6 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
 //TODO: PAssword encoding necessary
     @Bean
     public PasswordEncoder getPasswordEncoder(){
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
 }
 }

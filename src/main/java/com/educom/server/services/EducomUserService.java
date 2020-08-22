@@ -1,5 +1,6 @@
 package com.educom.server.services;
 
+import com.educom.server.auth.jwt.SignupRequest;
 import com.educom.server.entity.EducomUser;
 import com.educom.server.entity.Kurs;
 
@@ -9,7 +10,7 @@ import java.util.Optional;
 
 public interface EducomUserService<T> {
     List<T> getAll();
-    String save(T t);
+    String save(SignupRequest t);
     T getById(Long id);
     String delete(Long id);
     Optional<T> findByUserName(String username);

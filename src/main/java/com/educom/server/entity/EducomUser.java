@@ -2,6 +2,8 @@ package com.educom.server.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "educom_user")
@@ -13,12 +15,26 @@ public class EducomUser implements Serializable {
     private String email;
     private String password;
     private boolean active;
-    private String roles;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(	name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     public EducomUser() {
     }
 
-    public EducomUser(String userName, String email, String password, boolean active, String roles) {
+    public EducomUser(String userName, String email, String password, boolean active) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.active = active;
+
+    }
+
+    public EducomUser(String userName, String email, String password, boolean active, Set<Role> roles) {
+
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -66,11 +82,11 @@ public class EducomUser implements Serializable {
         this.active = active;
     }
 
-    public String getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(String roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 

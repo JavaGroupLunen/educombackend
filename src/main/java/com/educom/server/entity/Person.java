@@ -10,9 +10,6 @@ import java.util.Date;
 
 @MappedSuperclass
 public abstract class  Person implements Serializable {
-//   @Id
-//   @GeneratedValue(strategy = GenerationType.AUTO)
-//   protected long id;
     protected  String firstName;
     protected  String lastName ;
     protected  String email;

@@ -26,7 +26,7 @@ public class SchulerDaoImpl implements SchulerDao {
             LOGGER.log(Level.SEVERE,"Schuler is null. ");
             return null;
         }
-        entityManager.persist(schuler);
+        entityManager.merge(schuler);
         return "success";
     }
 

@@ -21,7 +21,6 @@ public class KursController {
 
     @RequestMapping(value = "/kurs", method = RequestMethod.POST)
     public String savekurs(@RequestBody Kurs requestparam) {
-        //Kurs kurs = new Kurs(requestparam.get("name").toString(), requestparam.get("raum").toString());
         return kursService.saveKurs(requestparam);
     }
 

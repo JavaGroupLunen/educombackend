@@ -38,8 +38,6 @@ private AuthenticationManager authenticationManager;
     @RequestMapping(value="/register", method= RequestMethod.POST)
     public String save(@RequestBody SignupRequest signupRequest) {
         System.out.println(signupRequest.toString());
-
-
         return educomUserService.save(signupRequest);
     }
 

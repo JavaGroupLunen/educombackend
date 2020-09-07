@@ -14,6 +14,7 @@ public interface VertragDao<T> {
     String delete(Long id);
     List<T> findByDate(Date vertragdate);
     String update(Long id,T t);
-
-
+    List<T> getByEltern(String elternname);
+    List<T> getByStatus(String status);
+    List<T> getBySchuler(String name);
 }

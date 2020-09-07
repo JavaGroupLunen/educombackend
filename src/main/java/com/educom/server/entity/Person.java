@@ -3,8 +3,11 @@ package com.educom.server.entity;
 
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -16,8 +19,8 @@ public abstract class  Person implements Serializable {
     protected String phoneNumber;
     @Enumerated(EnumType.STRING)
     protected Gender gender;
-    @Temporal(TemporalType.DATE)
-    protected Date geburstDatum;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    protected LocalDate geburstDatum;
     protected String adresse;
     protected String stadt;
     protected String land;
@@ -72,11 +75,11 @@ public abstract class  Person implements Serializable {
         this.gender = gender;
     }
 
-    public Date getGeburstDatum() {
+    public LocalDate getGeburstDatum() {
         return geburstDatum;
     }
 
-    public void setGeburstDatum(Date geburstDatum) {
+    public void setGeburstDatum(LocalDate geburstDatum) {
         this.geburstDatum = geburstDatum;
     }
 

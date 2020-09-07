@@ -13,6 +13,8 @@ import javax.persistence.EntityManager;
 import java.util.Date;
 import java.util.List;
 
+import static org.apache.tomcat.jni.Time.now;
+
 @Component
 @Transactional
 @Repository
@@ -28,7 +30,9 @@ public class VertragDaoImpl implements VertragDao<Vertrag> {
 
     @Override
     public String save(Vertrag vertrag) {
+        vertrag.setVertragsdatum(new Date(now()));
         entityManager.merge(vertrag);
+        System.out.println(vertrag);
         return "success";
     }
 
@@ -61,5 +65,23 @@ public class VertragDaoImpl implements VertragDao<Vertrag> {
         System.out.println(updateVertrag.getId());
         entityManager.merge(updateVertrag);
         return "success";
+    }
+//TODO:Buraya eltern e göre arama eklenecek
+    @Override
+    public List<Vertrag> getByEltern(String elternname) {
+          return entityManager.createQuery(
+                "from Vertrag where vertragdate LIKE CONCAT('%', :elternname,'%')")
+                .setParameter("elternname", elternname)
+                .getResultList();
+    }
+    //TODO:Buraya status e göre arama eklenecek
+    @Override
+    public List<Vertrag> getByStatus(String status) {
+        return null;
+    }
+    //TODO:Buraya schulername e göre arama eklenecek
+    @Override
+    public List<Vertrag> getBySchuler(String name) {
+        return null;
     }
 }

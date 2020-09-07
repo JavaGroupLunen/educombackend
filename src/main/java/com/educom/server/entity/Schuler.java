@@ -22,7 +22,7 @@ public class Schuler extends Person{
     private  Schule schule;
 
 
-    @ManyToMany(fetch = FetchType.LAZY,
+    @ManyToMany(fetch = FetchType.EAGER,
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE

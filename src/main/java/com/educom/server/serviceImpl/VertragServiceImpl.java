@@ -47,4 +47,19 @@ public class VertragServiceImpl implements VertragService<Vertrag> {
     public String update(Long id, Vertrag vertrag) {
         return vertragDao.update(id,vertrag);
     }
+
+    @Override
+    public List<Vertrag> findByEltern(String elternname) {
+        return vertragDao.getByEltern(elternname);
+    }
+
+    @Override
+    public List<Vertrag> findByStatus(String status) {
+        return vertragDao.getByStatus(status);
+    }
+
+    @Override
+    public List<Vertrag> findBySchuler(String name) {
+        return vertragDao.getBySchuler(name);
+    }
 }

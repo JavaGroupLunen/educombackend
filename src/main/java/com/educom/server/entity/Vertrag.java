@@ -4,6 +4,7 @@ import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -16,8 +17,8 @@ public class Vertrag implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
     private Date vertragsdatum;
-    private Date vertragsbegin;
-    private Date vertragsende;
+    private LocalDate vertragsbegin;
+    private LocalDate vertragsende;
     private ZahlungsType zahlungstype;
     private Double einmaligeKosten;
     private Double anmeldegebuhr;
@@ -27,16 +28,20 @@ public class Vertrag implements Serializable {
     private Double restbetrag;
     private int rabat;
     private int rabatPercent;
-    @OneToOne
-    private Schuler schuler;
-    @ManyToMany
-    private List<Kurs> kursList;
 
-    public Vertrag(long id, Date vertragsdatum, Date vertragsbegin, Date vertragsende, ZahlungsType zahlungstype, Double einmaligeKosten, Double anmeldegebuhr, Double materialprice, Double summe, Double monatlischeRate, Double restbetrag, int rabat, int rabatPercent, Schuler schuler, List<Kurs> kursList) {
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "vertrag_schueler",
+            joinColumns =
+                    { @JoinColumn(name = "vertrag_id", referencedColumnName = "id") },
+            inverseJoinColumns =
+                    { @JoinColumn(name = "schuler_id", referencedColumnName = "id") })
+    private Schuler schuler;
+
+
+    public Vertrag(long id, Date vertragsdatum, ZahlungsType zahlungstype, Double einmaligeKosten, Double anmeldegebuhr, Double materialprice, Double summe, Double monatlischeRate, Double restbetrag, int rabat, int rabatPercent, Schuler schuler) {
         this.id = id;
         this.vertragsdatum = vertragsdatum;
-        this.vertragsbegin = vertragsbegin;
-        this.vertragsende = vertragsende;
         this.zahlungstype = zahlungstype;
         this.einmaligeKosten = einmaligeKosten;
         this.anmeldegebuhr = anmeldegebuhr;
@@ -47,7 +52,7 @@ public class Vertrag implements Serializable {
         this.rabat = rabat;
         this.rabatPercent = rabatPercent;
         this.schuler = schuler;
-        this.kursList = kursList;
+
     }
 
     public Vertrag() {
@@ -69,19 +74,19 @@ public class Vertrag implements Serializable {
         this.vertragsdatum = vertragsdatum;
     }
 
-    public Date getVertragsbegin() {
+    public LocalDate getVertragsbegin() {
         return vertragsbegin;
     }
 
-    public void setVertragsbegin(Date vertragsbegin) {
+    public void setVertragsbegin(LocalDate vertragsbegin) {
         this.vertragsbegin = vertragsbegin;
     }
 
-    public Date getVertragsende() {
+    public LocalDate getVertragsende() {
         return vertragsende;
     }
 
-    public void setVertragsende(Date vertragsende) {
+    public void setVertragsende(LocalDate vertragsende) {
         this.vertragsende = vertragsende;
     }
 
@@ -163,13 +168,5 @@ public class Vertrag implements Serializable {
 
     public void setSchuler(Schuler schuler) {
         this.schuler = schuler;
-    }
-
-    public List<Kurs> getKursList() {
-        return kursList;
-    }
-
-    public void setKursList(List<Kurs> kursList) {
-        this.kursList = kursList;
     }
 }

@@ -1,10 +1,7 @@
 package com.educom.server.services;
 
-import com.educom.server.auth.jwt.SignupRequest;
-import com.educom.server.entity.EducomUser;
-import com.educom.server.entity.Kurs;
+import com.educom.server.auth.jwt.model.SignupRequest;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 

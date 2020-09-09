@@ -39,15 +39,21 @@ public class VertragController {
         Vertrag vertrag = (Vertrag) vertragService.getById(id);
         return new ResponseEntity<Vertrag>(vertrag, HttpStatus.OK);
     }
-    @RequestMapping(value = "/findByName/{firstname}", method = RequestMethod.GET)
-    public ResponseEntity<List<Vertrag>> lehreFindByName(@PathVariable("firstname") Date vertragDate) {
-        List<Vertrag> vertragList = vertragService.findByDate(vertragDate);
+    @RequestMapping(value = "/findbyschuler/{name}", method = RequestMethod.GET)
+    public ResponseEntity<List<Vertrag>> lehreFindBySchulerName(@PathVariable("name") String name) {
+        List<Vertrag> vertragList = vertragService.findBySchuler(name);
+        vertragList.forEach(v->{
+            System.out.println(v.toString());
+        });
         return new ResponseEntity<List<Vertrag>>(vertragList, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/findbyelternname/{elternname}", method = RequestMethod.GET)
     public ResponseEntity<List<Vertrag>> lehreFindByName(@PathVariable("elternname") String elternname) {
         List<Vertrag> vertragList = vertragService.findByEltern(elternname);
+        vertragList.forEach(v->{
+            System.out.println(v.toString());
+        });
         return new ResponseEntity<List<Vertrag>>(vertragList, HttpStatus.OK);
     }
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)

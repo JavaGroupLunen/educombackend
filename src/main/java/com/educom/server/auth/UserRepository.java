@@ -1,6 +1,6 @@
 package com.educom.server.auth;
 
-import com.educom.server.entity.EducomUser;
+import com.educom.server.auth.jwt.model.EducomUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

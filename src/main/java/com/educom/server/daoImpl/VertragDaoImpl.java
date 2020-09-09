@@ -30,7 +30,7 @@ public class VertragDaoImpl implements VertragDao<Vertrag> {
 
     @Override
     public String save(Vertrag vertrag) {
-        vertrag.setVertragsdatum(new Date(now()));
+        vertrag.setVertragsdatum(new Date());
         entityManager.merge(vertrag);
         System.out.println(vertrag);
         return "success";
@@ -66,11 +66,11 @@ public class VertragDaoImpl implements VertragDao<Vertrag> {
         entityManager.merge(updateVertrag);
         return "success";
     }
-//TODO:Buraya eltern e göre arama eklenecek
+
     @Override
     public List<Vertrag> getByEltern(String elternname) {
           return entityManager.createQuery(
-                "from Vertrag where vertragdate LIKE CONCAT('%', :elternname,'%')")
+                "select v from Vertrag v inner join v.schuler s where s.vater LIKE CONCAT('%', :elternname,'%') OR  s.mutter LIKE CONCAT('%', :elternname,'%')")
                 .setParameter("elternname", elternname)
                 .getResultList();
     }
@@ -79,9 +79,12 @@ public class VertragDaoImpl implements VertragDao<Vertrag> {
     public List<Vertrag> getByStatus(String status) {
         return null;
     }
-    //TODO:Buraya schulername e göre arama eklenecek
+
     @Override
     public List<Vertrag> getBySchuler(String name) {
-        return null;
+         return entityManager.createQuery(
+                "select v from Vertrag v join v.schuler s where s.lastName LIKE CONCAT('%', :name,'%') OR  s.firstName LIKE CONCAT('%', :name,'%')")
+                .setParameter("name", name)
+                .getResultList();
     }
 }

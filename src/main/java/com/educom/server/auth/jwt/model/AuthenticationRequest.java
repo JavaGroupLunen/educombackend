@@ -1,4 +1,4 @@
-package com.educom.server.auth;
+package com.educom.server.auth.jwt.model;
 
 public class AuthenticationRequest {
     private String username;

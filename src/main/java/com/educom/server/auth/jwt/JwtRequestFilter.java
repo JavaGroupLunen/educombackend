@@ -1,6 +1,5 @@
 package com.educom.server.auth.jwt;
 
-import com.educom.server.auth.MyUserDetails;
 import com.educom.server.auth.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

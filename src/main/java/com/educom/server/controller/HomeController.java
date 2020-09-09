@@ -1,14 +1,13 @@
 package com.educom.server.controller;
-import com.educom.server.auth.AuthenticationRequest;
+import com.educom.server.auth.jwt.model.AuthenticationRequest;
 import com.educom.server.auth.MyUserDetailsService;
-import com.educom.server.auth.jwt.AuthenticationResponse;
+import com.educom.server.auth.jwt.model.AuthenticationResponse;
 import com.educom.server.auth.jwt.JwtUtil;
-import com.educom.server.auth.jwt.SignupRequest;
-import com.educom.server.entity.EducomUser;
-import com.educom.server.entity.Schuler;
-import com.educom.server.serviceImpl.EducomUserServiceImpl;
+import com.educom.server.auth.jwt.model.SignupRequest;
+import com.educom.server.auth.jwt.model.EducomUser;
 import com.educom.server.services.EducomUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,7 +24,8 @@ import java.util.Optional;
 public class HomeController {
 @Autowired
 private AuthenticationManager authenticationManager;
-
+    @Autowired
+    private Environment env;
     @Autowired
     private JwtUtil jwtTokenUtil;
 
@@ -34,6 +34,11 @@ private AuthenticationManager authenticationManager;
 
     @Autowired
     private EducomUserService educomUserService;
+
+    @GetMapping("/status/check")
+    public String status() {
+        return "working on port " + env.getProperty("local.server.port")+", with token ="+env.getProperty("token.secret");
+    }
 
     @RequestMapping(value="/register", method= RequestMethod.POST)
     public String save(@RequestBody SignupRequest signupRequest) {

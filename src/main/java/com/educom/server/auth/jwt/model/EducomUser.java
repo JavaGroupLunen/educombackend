@@ -1,4 +1,6 @@
-package com.educom.server.entity;
+package com.educom.server.auth.jwt.model;
+
+import com.educom.server.entity.Role;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,8 +13,15 @@ public class EducomUser implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+   // @Column(nullable = false,length = 50)
+//    private String firstname;
+//    @Column(nullable = false,length = 50)
+//    private String lastname;
+    @Column(nullable = false,length = 50)
     private String userName;
+    @Column(nullable = false,length = 120,unique = true)
     private String email;
+    @Column(nullable = false,unique = true)
     private String password;
     private boolean active;
 
@@ -41,6 +50,22 @@ public class EducomUser implements Serializable {
         this.active = active;
         this.roles = roles;
     }
+
+//    public String getFirstname() {
+//        return firstname;
+//    }
+//
+//    public void setFirstname(String firstname) {
+//        this.firstname = firstname;
+//    }
+//
+//    public String getLastname() {
+//        return lastname;
+//    }
+//
+//    public void setLastname(String lastname) {
+//        this.lastname = lastname;
+//    }
 
     public String getEmail() {
         return email;

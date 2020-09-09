@@ -1,7 +1,10 @@
 package com.educom.server.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,14 +22,15 @@ public class Kurs implements Serializable {
     private Double kosten;
     private int dauer;
     private int kurslang;
-    private Date anfangAb;
-    private Date endeBis;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    private LocalDate anfangAb;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    private LocalDate endeBis;
     @Enumerated(EnumType.STRING)
     private KursType kurstype;
     @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn()
     private Lehre lehre;
-
     @ManyToMany(fetch = FetchType.EAGER,
             cascade = {
                     CascadeType.PERSIST,
@@ -95,19 +99,19 @@ public class Kurs implements Serializable {
         this.kurslang = kurslang;
     }
 
-    public Date getAnfangAb() {
+    public LocalDate getAnfangAb() {
         return anfangAb;
     }
 
-    public void setAnfangAb(Date anfangAb) {
+    public void setAnfangAb(LocalDate anfangAb) {
         this.anfangAb = anfangAb;
     }
 
-    public Date getEndeBis() {
+    public LocalDate getEndeBis() {
         return endeBis;
     }
 
-    public void setEndeBis(Date endeBis) {
+    public void setEndeBis(LocalDate endeBis) {
         this.endeBis = endeBis;
     }
 

@@ -169,4 +169,24 @@ public class Vertrag implements Serializable {
     public void setSchuler(Schuler schuler) {
         this.schuler = schuler;
     }
+
+    @Override
+    public String toString() {
+        return "Vertrag{" +
+                "id=" + id +
+                ", vertragsdatum=" + vertragsdatum +
+                ", vertragsbegin=" + vertragsbegin +
+                ", vertragsende=" + vertragsende +
+                ", zahlungstype=" + zahlungstype +
+                ", einmaligeKosten=" + einmaligeKosten +
+                ", anmeldegebuhr=" + anmeldegebuhr +
+                ", materialprice=" + materialprice +
+                ", summe=" + summe +
+                ", monatlischeRate=" + monatlischeRate +
+                ", restbetrag=" + restbetrag +
+                ", rabat=" + rabat +
+                ", rabatPercent=" + rabatPercent +
+                ", schuler=" + schuler +
+                '}';
+    }
 }

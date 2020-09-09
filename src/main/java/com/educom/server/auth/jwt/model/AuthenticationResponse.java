@@ -1,4 +1,4 @@
-package com.educom.server.auth.jwt;
+package com.educom.server.auth.jwt.model;
 
 import java.util.List;
 

@@ -16,7 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 @Configuration
 @EnableWebSecurity
@@ -27,6 +27,14 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     UserDetailsService userDetailsService;
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
+
+
+
+    public WebSecurityConfig(JwtRequestFilter jwtRequestFilter,UserDetailsService userDetailsService) {
+
+        this.jwtRequestFilter=jwtRequestFilter;
+        this.userDetailsService=userDetailsService;
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -49,9 +57,9 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-//TODO: PAssword encoding necessary
+
     @Bean
     public PasswordEncoder getPasswordEncoder(){
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
 }
 }

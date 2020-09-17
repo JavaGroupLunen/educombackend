@@ -5,7 +5,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,10 +21,10 @@ public class Kurs implements Serializable {
     private Double kosten;
     private int dauer;
     private int kurslang;
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
-    private LocalDate anfangAb;
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
-    private LocalDate endeBis;
+    @DateTimeFormat(pattern = "dd.MM.yyyy")
+    private LocalDate anfangab;
+    @DateTimeFormat(pattern = "dd.MM.yyyy")
+    private LocalDate endebis;
     @Enumerated(EnumType.STRING)
     private KursType kurstype;
     @ManyToOne(fetch=FetchType.EAGER)
@@ -49,6 +48,22 @@ public class Kurs implements Serializable {
     }
 
     public Kurs(String name, String raum) {
+    }
+
+    public LocalDate getAnfangab() {
+        return anfangab;
+    }
+
+    public void setAnfangab(LocalDate anfangab) {
+        this.anfangab = anfangab;
+    }
+
+    public LocalDate getEndebis() {
+        return endebis;
+    }
+
+    public void setEndebis(LocalDate endebis) {
+        this.endebis = endebis;
     }
 
     public long getId() {
@@ -99,21 +114,7 @@ public class Kurs implements Serializable {
         this.kurslang = kurslang;
     }
 
-    public LocalDate getAnfangAb() {
-        return anfangAb;
-    }
 
-    public void setAnfangAb(LocalDate anfangAb) {
-        this.anfangAb = anfangAb;
-    }
-
-    public LocalDate getEndeBis() {
-        return endeBis;
-    }
-
-    public void setEndeBis(LocalDate endeBis) {
-        this.endeBis = endeBis;
-    }
 
     public KursType getKurstype() {
         return kurstype;

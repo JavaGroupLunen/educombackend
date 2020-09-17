@@ -73,7 +73,7 @@ public class LehreDaoImpl implements LehreDao<Lehre> {
 
     public List<Lehre> findByEmail(String email) {
         return entityManager.createQuery(
-                "from Lehre where emailId LIKE CONCAT('%',:emailId,'%')")
+                "from Lehre where email LIKE CONCAT('%',:email,'%')")
                 .setParameter("emailId", email)
                 .getResultList();
     }

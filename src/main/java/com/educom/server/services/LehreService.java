@@ -11,6 +11,6 @@ public interface LehreService {
     String deleteLehre(Long id);
     List<Lehre> findByName(String firstName);
     List<Lehre> findByLastName(String lastName);
-    List<Lehre> findByEmailId(String emailId);
+    List<Lehre> findByEmailId(String email);
     String updateLehre(Long id,Lehre lehre);
 }

@@ -21,7 +21,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
-public class HomeController {
+public class AuthController {
 @Autowired
 private AuthenticationManager authenticationManager;
     @Autowired
@@ -42,35 +42,32 @@ private AuthenticationManager authenticationManager;
 
     @RequestMapping(value="/register", method= RequestMethod.POST)
     public String save(@RequestBody SignupRequest signupRequest) {
-        System.out.println(signupRequest.toString());
         return educomUserService.save(signupRequest);
     }
 
     @RequestMapping(value = "/userlist", method = RequestMethod.GET)
     public ResponseEntity<List<EducomUser>> showList() {
         List<EducomUser> educomUserList = educomUserService.getAll();
-//       schulerList.forEach((e)->{
-//           System.out.println(e.toString());
-//       });
-        return new ResponseEntity<List<EducomUser>>(educomUserList, HttpStatus.OK);
+        return new ResponseEntity<>(educomUserList, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/getbyId/{id}", method = RequestMethod.GET)
     public ResponseEntity<EducomUser> getById(@PathVariable("id") Long id) {
         EducomUser educomUser = (EducomUser) educomUserService.getById(id);
-        return new ResponseEntity<EducomUser>(educomUser, HttpStatus.OK);
+        return new ResponseEntity<>(educomUser, HttpStatus.OK);
     }
     @RequestMapping(value = "/findbyusername/{userName}", method = RequestMethod.GET)
     public ResponseEntity<EducomUser> findByName(@PathVariable("firstname") String userName) {
        Optional<EducomUser> educomUser = educomUserService.findByUserName(userName);
-        return new ResponseEntity<EducomUser>(educomUser.get(), HttpStatus.OK);
+      if(educomUser.isPresent()){
+          return new ResponseEntity<>(educomUser.get(), HttpStatus.OK);
+      }
+       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 
     @RequestMapping(value="/signin",method= RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest)
-            throws Exception{
-        System.out.println(authenticationRequest.toString());
+    public ResponseEntity<AuthenticationResponse> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
@@ -79,13 +76,8 @@ private AuthenticationManager authenticationManager;
         catch (BadCredentialsException e) {
             throw new Exception("Incorrect username or password", e);
         }
-
-
-        final UserDetails userDetails = userDetailsService
-                .loadUserByUsername(authenticationRequest.getUsername());
-
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
         final String jwt = jwtTokenUtil.generateToken(userDetails);
-
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }
 }

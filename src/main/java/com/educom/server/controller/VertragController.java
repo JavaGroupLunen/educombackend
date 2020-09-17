@@ -1,8 +1,5 @@
 package com.educom.server.controller;
 
-import com.educom.server.dao.KursRepo;
-import com.educom.server.dao.VertragDao;
-import com.educom.server.entity.Kurs;
 import com.educom.server.entity.Vertrag;
 import com.educom.server.services.VertragService;
 
@@ -12,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -24,7 +20,6 @@ public class VertragController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String save(@RequestBody Vertrag requestparam) {
-        //Kurs kurs = new Kurs(requestparam.get("name").toString(), requestparam.get("raum").toString());
         return vertragService.save(requestparam);
     }
 
@@ -42,20 +37,15 @@ public class VertragController {
     @RequestMapping(value = "/findbyschuler/{name}", method = RequestMethod.GET)
     public ResponseEntity<List<Vertrag>> lehreFindBySchulerName(@PathVariable("name") String name) {
         List<Vertrag> vertragList = vertragService.findBySchuler(name);
-        vertragList.forEach(v->{
-            System.out.println(v.toString());
-        });
         return new ResponseEntity<List<Vertrag>>(vertragList, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/findbyelternname/{elternname}", method = RequestMethod.GET)
     public ResponseEntity<List<Vertrag>> lehreFindByName(@PathVariable("elternname") String elternname) {
         List<Vertrag> vertragList = vertragService.findByEltern(elternname);
-        vertragList.forEach(v->{
-            System.out.println(v.toString());
-        });
         return new ResponseEntity<List<Vertrag>>(vertragList, HttpStatus.OK);
     }
+
     @RequestMapping(value = "/deletebyId/{id}", method = RequestMethod.DELETE)
     public String  delete(@PathVariable Long id) {
         return vertragService.delete(id);
@@ -64,7 +54,7 @@ public class VertragController {
     @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Vertrag> updateLehre(@PathVariable("id") Long id,@RequestBody Vertrag vertrag) {
         vertragService.update(id,vertrag);
-        return new ResponseEntity<Vertrag>(vertrag, HttpStatus.OK);
+        return new ResponseEntity<>(vertrag, HttpStatus.OK);
 
     }
 

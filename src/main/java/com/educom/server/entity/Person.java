@@ -26,11 +26,6 @@ public abstract class  Person implements Serializable {
     protected String land;
     protected String plz;
 
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -54,10 +49,6 @@ public abstract class  Person implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-//
-//    public long getId() {
-//        return id;
-//    }
 
     public String getPhoneNumber() {
         return phoneNumber;

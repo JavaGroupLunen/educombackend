@@ -65,7 +65,6 @@ public String update(Long id, StundenPlan stundenPlan) {
         updateStundenPlan.setDatum(stundenPlan.getDatum());
         updateStundenPlan.setEnde(stundenPlan.getEnde());
         updateStundenPlan.setKurs(stundenPlan.getKurs());
-        updateStundenPlan.setLehre(stundenPlan.getLehre());
         updateStundenPlan.setVertretung(stundenPlan.getVertretung());
         updateStundenPlan.setDetail(stundenPlan.getDetail());
         entityManager.merge(updateStundenPlan);

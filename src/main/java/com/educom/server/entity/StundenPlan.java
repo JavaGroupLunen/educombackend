@@ -1,8 +1,10 @@
 package com.educom.server.entity;
 
+
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -13,16 +15,16 @@ public class StundenPlan {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private LocalDate datum;
-    private DateTime beginn;
-    private DateTime ende;
+    private Time beginn;
+    private Time ende;
     private String raum;
     @OneToOne
     private Kurs kurs;
-    @OneToOne
-    private Lehre lehre;
+//    @OneToOne
+//    private Lehre lehre;
     private Boolean vertretung;
     @OneToMany
-    private List<StundenPlanDetails> detail;
+    private List<StundenPlanDetails> details;
 
     public StundenPlan() {
     }
@@ -43,19 +45,19 @@ public class StundenPlan {
         this.datum = datum;
     }
 
-    public DateTime getBeginn() {
+    public Time getBeginn() {
         return beginn;
     }
 
-    public void setBeginn(DateTime beginn) {
+    public void setBeginn(Time beginn) {
         this.beginn = beginn;
     }
 
-    public DateTime getEnde() {
+    public Time getEnde() {
         return ende;
     }
 
-    public void setEnde(DateTime ende) {
+    public void setEnde(Time ende) {
         this.ende = ende;
     }
 
@@ -75,13 +77,7 @@ public class StundenPlan {
         this.kurs = kurs;
     }
 
-    public Lehre getLehre() {
-        return lehre;
-    }
 
-    public void setLehre(Lehre lehre) {
-        this.lehre = lehre;
-    }
 
     public Boolean getVertretung() {
         return vertretung;
@@ -92,10 +88,10 @@ public class StundenPlan {
     }
 
     public List<StundenPlanDetails> getDetail() {
-        return detail;
+        return details;
     }
 
-    public void setDetail(List<StundenPlanDetails> detail) {
-        this.detail = detail;
+    public void setDetail(List<StundenPlanDetails> details) {
+        this.details = details;
     }
 }

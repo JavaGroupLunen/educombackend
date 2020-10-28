@@ -57,7 +57,7 @@ private AuthenticationManager authenticationManager;
         return new ResponseEntity<>(educomUser, HttpStatus.OK);
     }
     @RequestMapping(value = "/findbyusername/{userName}", method = RequestMethod.GET)
-    public ResponseEntity<EducomUser> findByName(@PathVariable("firstname") String userName) {
+    public ResponseEntity<EducomUser> findByName(@PathVariable("username") String userName) {
        Optional<EducomUser> educomUser = educomUserService.findByUserName(userName);
       if(educomUser.isPresent()){
           return new ResponseEntity<>(educomUser.get(), HttpStatus.OK);

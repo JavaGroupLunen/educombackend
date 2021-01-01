@@ -1,6 +1,7 @@
 package com.educom.server.auth;
 
 import com.educom.server.auth.jwt.JwtRequestFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,11 +21,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+@RequiredArgsConstructor
 public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    UserDetailsService userDetailsService;
-    @Autowired
+@Autowired
+   private UserDetailsService userDetailsService;
+@Autowired
     private JwtRequestFilter jwtRequestFilter;
 
 

@@ -69,6 +69,7 @@ private AuthenticationManager authenticationManager;
     @RequestMapping(value="/signin",method= RequestMethod.POST)
     public ResponseEntity<AuthenticationResponse> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
+            System.out.println(authenticationRequest.toString());
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
             );

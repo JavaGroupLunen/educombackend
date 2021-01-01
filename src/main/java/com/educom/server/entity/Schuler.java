@@ -25,11 +25,10 @@ public class Schuler extends Person{
 
     @ManyToMany(fetch = FetchType.EAGER,
             cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
+                    CascadeType.ALL
             })
     @JoinTable(
-            name = "schuler_kurs",
+            name = "anmeldung",
             joinColumns = { @JoinColumn(name = "schuler_id") },
             inverseJoinColumns = { @JoinColumn(name = "kurs_id") }
     )

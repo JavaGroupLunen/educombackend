@@ -18,7 +18,7 @@ public class KursController {
     private KursService kursService;
 
 
-    @RequestMapping(value = "/kurs", method = RequestMethod.POST)
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String savekurs(@RequestBody Kurs kurs) {
         return kursService.saveKurs(kurs);
     }
@@ -30,7 +30,7 @@ public class KursController {
     }
 
     @RequestMapping(value = "/getbyId/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Kurs> getLehre(@PathVariable("id") Long id) {
+    public ResponseEntity<Kurs> getKurs(@PathVariable("id") Long id) {
         Kurs kurs = kursService.getKurs(id);
         return new ResponseEntity<>(kurs, HttpStatus.OK);
     }
@@ -47,7 +47,7 @@ public class KursController {
 
     }
     @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Kurs> updateLehre(@PathVariable("id") Long id,@RequestBody Kurs kurs) {
+    public ResponseEntity<Kurs> updateKurs(@PathVariable("id") Long id,@RequestBody Kurs kurs) {
         kursService.updateKurs(id,kurs);
         return new ResponseEntity<>(kurs, HttpStatus.OK);
 

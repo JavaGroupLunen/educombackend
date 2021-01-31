@@ -1,6 +1,7 @@
 package com.educom.server.auth;
 
 import com.educom.server.auth.jwt.JwtRequestFilter;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,21 +22,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
 
 @Autowired
-   private UserDetailsService userDetailsService;
+   private final UserDetailsService userDetailsService;
 @Autowired
-    private JwtRequestFilter jwtRequestFilter;
+    private final JwtRequestFilter jwtRequestFilter;
 
 
 
-    public WebSecurityConfig(JwtRequestFilter jwtRequestFilter,UserDetailsService userDetailsService) {
-
-        this.jwtRequestFilter=jwtRequestFilter;
-        this.userDetailsService=userDetailsService;
-    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

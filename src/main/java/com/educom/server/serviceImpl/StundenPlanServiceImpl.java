@@ -4,11 +4,12 @@ import com.educom.server.dao.StundenPlanDao;
 import com.educom.server.entity.StundenPlan;
 import com.educom.server.services.StundenPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.logging.Logger;
-
+@Component
 public class StundenPlanServiceImpl implements StundenPlanService<StundenPlan> {
     private static final Logger LOGGER = Logger.getLogger(SchulerServiceImpl.class.getName());
     @Autowired

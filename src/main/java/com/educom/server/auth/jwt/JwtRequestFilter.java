@@ -1,6 +1,7 @@
 package com.educom.server.auth.jwt;
 
 import com.educom.server.auth.MyUserDetailsService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 @Component
+@AllArgsConstructor
 public class JwtRequestFilter extends OncePerRequestFilter {
     @Autowired
     private MyUserDetailsService userDetailsService;

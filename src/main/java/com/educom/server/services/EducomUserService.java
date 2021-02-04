@@ -12,4 +12,5 @@ public interface EducomUserService<T> {
     String delete(Long id);
     Optional<T> findByUserName(String username);
     String update(Long id,T t);
+
 }

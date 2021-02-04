@@ -1,14 +1,21 @@
 package com.educom.server.daoImpl;
 
-import com.educom.server.dao.StundenPlanDao;
+
+import com.educom.server.dao.StundenPlanDetailsDao;
 import com.educom.server.entity.StundenPlanDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDate;
 import java.util.List;
 
-public class StundenPlanDetailsDaoImpl implements StundenPlanDao<StundenPlanDetails> {
+@Component
+@Transactional
+@Repository
+public class StundenPlanDetailsDaoImpl implements StundenPlanDetailsDao<StundenPlanDetails> {
     @Autowired
     private EntityManager entityManager;
 

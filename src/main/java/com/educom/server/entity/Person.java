@@ -25,6 +25,15 @@ public abstract class  Person implements Serializable {
     protected String stadt;
     protected String land;
     protected String plz;
+    protected String pictureurl;
+
+    public String getPictureurl() {
+        return pictureurl;
+    }
+
+    public void setPictureurl(String pictureurl) {
+        this.pictureurl = pictureurl;
+    }
 
     public String getFirstName() {
         return firstName;

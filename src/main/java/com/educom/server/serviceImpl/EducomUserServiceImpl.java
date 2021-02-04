@@ -1,26 +1,31 @@
 package com.educom.server.serviceImpl;
 
+import com.educom.server.auth.RefreshTokenRepository;
 import com.educom.server.auth.RoleRepository;
 import com.educom.server.auth.UserRepository;
-import com.educom.server.auth.jwt.model.SignupRequest;
+import com.educom.server.auth.jwt.model.*;
 import com.educom.server.entity.ERole;
-import com.educom.server.auth.jwt.model.EducomUser;
 import com.educom.server.entity.Role;
 import com.educom.server.services.EducomUserService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.time.Instant;
 import java.util.*;
 
 @Component
+@AllArgsConstructor
 public class EducomUserServiceImpl implements EducomUserService<EducomUser> {
     @Autowired
-    UserRepository userRepository;
+    private final  UserRepository userRepository;
     @Autowired
-    PasswordEncoder encoder;
+    private final  PasswordEncoder encoder;
     @Autowired
-    RoleRepository roleRepository;
+    private final   RoleRepository roleRepository;
+    @Autowired
+    private final RefreshTokenRepository refreshTokenRepository;
     @Override
     public List<EducomUser> getAll() {
         return userRepository.findAll();
@@ -61,7 +66,8 @@ public class EducomUserServiceImpl implements EducomUserService<EducomUser> {
          return "updated";
     }
 
-private Set<Role> getUserRole(SignupRequest signupRequest){
+
+    private Set<Role> getUserRole(SignupRequest signupRequest){
 
     Set<String> strRoles = signupRequest.getRole();
     Set<Role> roles = new HashSet<>();

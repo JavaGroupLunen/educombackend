@@ -1,10 +1,8 @@
 package com.educom.server.controller;
-import com.educom.server.auth.jwt.model.AuthenticationRequest;
+import com.educom.server.auth.jwt.RefreshTokenService;
+import com.educom.server.auth.jwt.model.*;
 import com.educom.server.auth.MyUserDetailsService;
-import com.educom.server.auth.jwt.model.AuthenticationResponse;
 import com.educom.server.auth.jwt.JwtUtil;
-import com.educom.server.auth.jwt.model.SignupRequest;
-import com.educom.server.auth.jwt.model.EducomUser;
 import com.educom.server.services.EducomUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -16,8 +14,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.http.HttpStatus.OK;
 
 @RestController
 @RequestMapping("/auth")
@@ -28,7 +29,8 @@ private AuthenticationManager authenticationManager;
     private Environment env;
     @Autowired
     private JwtUtil jwtTokenUtil;
-
+    @Autowired
+    private RefreshTokenService refreshTokenService;
     @Autowired
     private MyUserDetailsService userDetailsService;
 
@@ -48,19 +50,19 @@ private AuthenticationManager authenticationManager;
     @RequestMapping(value = "/userlist", method = RequestMethod.GET)
     public ResponseEntity<List<EducomUser>> showList() {
         List<EducomUser> educomUserList = educomUserService.getAll();
-        return new ResponseEntity<>(educomUserList, HttpStatus.OK);
+        return new ResponseEntity<>(educomUserList, OK);
     }
 
     @RequestMapping(value = "/getbyId/{id}", method = RequestMethod.GET)
     public ResponseEntity<EducomUser> getById(@PathVariable("id") Long id) {
         EducomUser educomUser = (EducomUser) educomUserService.getById(id);
-        return new ResponseEntity<>(educomUser, HttpStatus.OK);
+        return new ResponseEntity<>(educomUser, OK);
     }
     @RequestMapping(value = "/findbyusername/{userName}", method = RequestMethod.GET)
     public ResponseEntity<EducomUser> findByName(@PathVariable("username") String userName) {
        Optional<EducomUser> educomUser = educomUserService.findByUserName(userName);
       if(educomUser.isPresent()){
-          return new ResponseEntity<>(educomUser.get(), HttpStatus.OK);
+          return new ResponseEntity<>(educomUser.get(), OK);
       }
        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -81,4 +83,15 @@ private AuthenticationManager authenticationManager;
         final String jwt = jwtTokenUtil.generateToken(userDetails);
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }
+
+    @PostMapping("refresh/token")
+    public AuthenticationResponse refreshTokens(@Valid @RequestBody RefreshTokenRequest refreshTokenRequest){
+        return jwtTokenUtil.refreshToken(refreshTokenRequest);
+    }
+    @PostMapping
+    public ResponseEntity<String> logout(@Valid @RequestBody RefreshTokenRequest refreshTokenRequest){
+        refreshTokenService.deleteRefreshToken(refreshTokenRequest.getRefreshToken());
+        return ResponseEntity.status(OK).body("Refresh Token Deleted Successfully!!");
+    }
+
 }
